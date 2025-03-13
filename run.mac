@@ -1,0 +1,15 @@
+# Initialize the kernel
+/run/initialize
+
+# Set verbose levels (reduced to avoid overwhelming output since we're tracking everything to CSV)
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set beam parameters
+/gun/particle proton
+/gun/energy 8 GeV  # Higher energy for better muon production
+
+# Run 100 events
+/run/beamOn 100

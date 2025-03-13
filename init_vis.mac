@@ -1,0 +1,41 @@
+# Use OpenGL 
+/vis/open OGL
+
+# Draw geometry
+/vis/drawVolume
+
+# Set specific style (surface instead of wireframe to see colors better)
+/vis/viewer/set/style surface
+/vis/viewer/set/viewpointThetaPhi 60 30
+/vis/viewer/zoom 1.5
+
+# Draw coordinate axes
+/vis/scene/add/axes 0 0 0 1 m
+
+# Setting for visualization of tracks
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA proton 1 0 0 1      # red
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA mu+ 0 1 0 1         # green
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA mu- 0 0.8 0.2 1     # green-yellow
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA e- 0 0 1 1          # blue
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA gamma 1 1 0 1       # yellow
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA neutron 1 0.5 0 1   # orange
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSize 2
+
+# Setting for color code visualization 
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawAuxPts true
+/vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsSize 2
+
+# Setting for visualization of hits and energy deposits
+/vis/scene/add/hits
+
+# For drawing the tracks
+/vis/scene/endOfEventAction accumulate 10
+
+# Setting for auto refresh 
+/vis/viewer/set/autoRefresh true
+
+# Verbosity setting
+/tracking/verbose 1

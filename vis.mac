@@ -1,0 +1,39 @@
+# Use OpenGL 
+/vis/open DAWNFILE
+
+# Draw geometry
+/vis/drawVolume
+
+# Set specific style
+/vis/viewer/set/style wireframe
+/vis/viewer/set/viewpointThetaPhi 90 0
+/vis/viewer/zoom 1.5
+
+# Draw coordinate axes
+/vis/scene/add/axes 0 0 0 1 m
+
+# Setting for visualization of tracks
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+
+# Setting for color code visualization 
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawAuxPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsSize 2
+/vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsColour red
+
+# Setting for visualization of hits and energy deposits
+/vis/scene/add/hits
+
+# For drawing the tracks
+/vis/scene/endOfEventAction accumulate
+
+# Setting for auto refresh 
+/vis/viewer/set/autoRefresh true
+
+# Setting to look from the beam direction
+/vis/viewer/set/viewpointThetaPhi 90 0
+
+# Verbosity setting
+/tracking/verbose 1
