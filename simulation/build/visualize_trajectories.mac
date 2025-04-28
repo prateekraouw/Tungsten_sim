@@ -1,0 +1,2328 @@
+# Initialize the kernel
+/run/initialize
+
+# Set up visualization
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/set/style surface
+/vis/viewer/set/viewpointThetaPhi 60 30
+/vis/viewer/zoom 1.5
+/vis/scene/add/axes 0 0 0 1 m
+
+# Make world volume transparent
+/vis/geometry/set/visibility World 0 false
+
+# Set up trajectory drawing
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/modeling/trajectories/drawByParticleID-0/set mu- green
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+
+# Generate trajectories from file data
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.0210153 -0.0252764 -43.0097
+/vis/scene/add/polylinePoint -3.1852e-05 -2.26853e-05 -42.5607
+/vis/scene/add/polylinePoint 5.00033e-05 1.89893e-05 -49.9987
+/vis/scene/add/polylinePoint 0.0487157 0.229209 -45.797
+/vis/scene/add/polylinePoint 0.218954 6.63255 -35.4498
+/vis/scene/add/polylinePoint 0.664786 13.7752 -23.9425
+/vis/scene/add/polylinePoint 0.975276 15.4394 -21.4161
+/vis/scene/add/polylinePoint 1.4397 19.1768 -15.6726
+/vis/scene/add/polylinePoint 1.51399 19.7507 -14.7754
+/vis/scene/add/polylinePoint 1.57422 20.4409 -13.6734
+/vis/scene/add/polylinePoint 1.55453 21.062 -12.4636
+/vis/scene/add/polylinePoint 1.53364 21.3635 -11.8688
+/vis/scene/add/polylinePoint 1.50139 25.0 -4.74461
+/vis/scene/add/polylinePoint 0.543452 33.424 13.0803
+/vis/scene/add/polylinePoint -2.25681 57.9528 65.0
+/vis/scene/add/polylinePoint -2.79805 62.6778 75.0
+/vis/scene/add/polylinePoint -5.85013 89.4121 131.592
+/vis/scene/add/polylinePoint -7.71997 105.867 166.447
+/vis/scene/add/polylinePoint -14.323 163.814 289.222
+/vis/scene/add/polylinePoint -14.6029 166.259 294.4
+/vis/scene/add/polylinePoint -15.922 177.809 318.845
+/vis/scene/add/polylinePoint -20.6092 218.939 405.955
+/vis/scene/add/polylinePoint -25.6653 263.632 500.456
+/vis/scene/add/polylinePoint -35.9544 354.706 693.154
+/vis/scene/add/polylinePoint -42.222 409.9 810.168
+/vis/scene/add/polylinePoint -42.7362 414.421 819.735
+/vis/scene/add/polylinePoint -45.2698 436.636 866.731
+/vis/scene/add/polylinePoint -49.4781 473.312 944.366
+/vis/scene/add/polylinePoint -49.8436 476.47 951.056
+/vis/scene/add/polylinePoint -52.5156 499.565 1000.0
+/vis/scene/add/polylinePoint -1.33939 3.33059 -19.8621
+/vis/scene/add/polylinePoint -2.3455 6.43887 -17.057
+/vis/scene/add/polylinePoint -2.78407 9.18026 -14.9805
+/vis/scene/add/polylinePoint -3.53937 11.531 -13.65
+/vis/scene/add/polylinePoint -3.98585 13.3757 -12.3483
+/vis/scene/add/polylinePoint -4.30131 14.6236 -11.0232
+/vis/scene/add/polylinePoint -4.43886 15.5371 -9.85507
+/vis/scene/add/polylinePoint -4.51041 16.4092 -9.05541
+/vis/scene/add/polylinePoint -4.84423 16.8536 -8.28458
+/vis/scene/add/polylinePoint -5.12356 17.2025 -7.67573
+/vis/scene/add/polylinePoint -5.33542 17.3955 -7.12775
+/vis/scene/add/polylinePoint -5.52827 17.5431 -6.70339
+/vis/scene/add/polylinePoint -5.67548 17.6486 -6.35656
+/vis/scene/add/polylinePoint -5.69209 17.8393 -6.10469
+/vis/scene/add/polylinePoint -5.66151 17.9537 -5.88043
+/vis/scene/add/polylinePoint -5.69107 18.0169 -5.7044
+/vis/scene/add/polylinePoint -5.7175 18.0417 -5.62275
+/vis/scene/add/polylinePoint -5.71795 18.0421 -5.62193
+/vis/scene/add/polylinePoint -5.71795 18.0421 -5.62193
+/vis/scene/add/polylinePoint 2.14512e-06 -3.84602e-07 -49.1033
+/vis/scene/add/polylinePoint 5.6139 -1.14558 26.8467
+/vis/scene/add/polylinePoint -0.132802 -0.156705 -50.0
+/vis/scene/add/polylinePoint -0.150346 -6.01642 -67.381
+/vis/scene/add/polylinePoint -0.24079 -31.1312 -141.982
+/vis/scene/add/polylinePoint -0.350754 -63.2684 -237.623
+/vis/scene/add/polylinePoint -0.406296 -81.1422 -291.043
+/vis/scene/add/polylinePoint -0.478326 -96.2009 -335.72
+/vis/scene/add/polylinePoint -0.452872 -118.86 -402.655
+/vis/scene/add/polylinePoint -0.494559 -124.371 -419.064
+/vis/scene/add/polylinePoint -0.525677 -128.554 -431.483
+/vis/scene/add/polylinePoint -0.618691 -140.434 -466.733
+/vis/scene/add/polylinePoint -0.630804 -141.411 -469.634
+/vis/scene/add/polylinePoint -0.657251 -143.768 -476.623
+/vis/scene/add/polylinePoint -0.763214 -156.128 -513.21
+/vis/scene/add/polylinePoint -0.883512 -167.94 -548.15
+/vis/scene/add/polylinePoint -0.912516 -170.157 -554.775
+/vis/scene/add/polylinePoint -0.955782 -173.309 -564.192
+/vis/scene/add/polylinePoint -1.0269 -178.541 -579.877
+/vis/scene/add/polylinePoint -1.48748 -203.076 -653.276
+/vis/scene/add/polylinePoint -1.58061 -210.459 -675.498
+/vis/scene/add/polylinePoint -1.60554 -212.058 -680.339
+/vis/scene/add/polylinePoint -1.65697 -214.797 -688.655
+/vis/scene/add/polylinePoint -1.66018 -215.003 -689.281
+/vis/scene/add/polylinePoint -1.74901 -221.337 -708.577
+/vis/scene/add/polylinePoint -1.77866 -223.238 -714.385
+/vis/scene/add/polylinePoint -1.80491 -224.649 -718.705
+/vis/scene/add/polylinePoint -2.00715 -235.733 -752.676
+/vis/scene/add/polylinePoint -2.11141 -243.503 -776.378
+/vis/scene/add/polylinePoint -2.13684 -245.519 -782.657
+/vis/scene/add/polylinePoint -2.21925 -252.017 -802.831
+/vis/scene/add/polylinePoint -2.22342 -252.719 -805.011
+/vis/scene/add/polylinePoint -2.32427 -268.616 -854.394
+/vis/scene/add/polylinePoint -2.3627 -274.916 -874.014
+/vis/scene/add/polylinePoint -2.42211 -280.295 -890.769
+/vis/scene/add/polylinePoint -2.45684 -282.67 -898.146
+/vis/scene/add/polylinePoint -2.49762 -285.881 -908.149
+/vis/scene/add/polylinePoint -2.57371 -294.411 -934.746
+/vis/scene/add/polylinePoint -2.74465 -315.472 -1000.0
+/vis/scene/add/polylinePoint -0.455636 1.72709 -45.9223
+/vis/scene/add/polylinePoint -0.951953 2.78527 -44.1213
+/vis/scene/add/polylinePoint -1.35434 3.42361 -43.3531
+/vis/scene/add/polylinePoint -1.84562 4.34999 -42.3007
+/vis/scene/add/polylinePoint -2.18545 5.12264 -41.5016
+/vis/scene/add/polylinePoint -2.41944 5.815 -40.9127
+/vis/scene/add/polylinePoint -2.72579 6.42442 -40.5737
+/vis/scene/add/polylinePoint -3.05157 6.87794 -40.342
+/vis/scene/add/polylinePoint -3.24807 7.27766 -40.113
+/vis/scene/add/polylinePoint -3.34394 7.59636 -39.9028
+/vis/scene/add/polylinePoint -3.34298 7.89063 -39.7909
+/vis/scene/add/polylinePoint -3.35592 8.13747 -39.8268
+/vis/scene/add/polylinePoint -3.36735 8.31739 -39.8557
+/vis/scene/add/polylinePoint -3.37051 8.37066 -39.9109
+/vis/scene/add/polylinePoint -3.37059 8.37109 -39.9135
+/vis/scene/add/polylinePoint -3.37059 8.37109 -39.9135
+/vis/scene/add/polylinePoint -3.37059 8.37109 -39.9135
+/vis/scene/add/polylinePoint -7.32574e-05 4.45666e-05 -28.7735
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 7.31389 5.85291 -15.2714
+/vis/scene/add/polylinePoint 11.0167 10.0071 -4.39384
+/vis/scene/add/polylinePoint 14.0636 12.2099 3.63002
+/vis/scene/add/polylinePoint -0.93484 0.502568 -49.7831
+/vis/scene/add/polylinePoint -10.5876 5.43554 -47.7209
+/vis/scene/add/polylinePoint -23.2858 10.9367 -46.5033
+/vis/scene/add/polylinePoint 9.23001 -5.16752 12.0199
+/vis/scene/add/polylinePoint 15.1223 -12.4054 42.1739
+/vis/scene/add/polylinePoint 15.2149 -12.5465 42.8582
+/vis/scene/add/polylinePoint 16.1888 -13.958 50.0
+/vis/scene/add/polylinePoint 18.6235 -17.2118 65.0
+/vis/scene/add/polylinePoint 19.0743 -17.8145 67.7783
+/vis/scene/add/polylinePoint 20.2447 -19.3821 75.0
+/vis/scene/add/polylinePoint 29.032 -31.1503 129.211
+/vis/scene/add/polylinePoint 35.2991 -39.5488 167.901
+/vis/scene/add/polylinePoint 44.5627 -51.9619 225.089
+/vis/scene/add/polylinePoint 66.7775 -81.717 362.171
+/vis/scene/add/polylinePoint 92.8123 -116.539 522.57
+/vis/scene/add/polylinePoint 93.9563 -118.072 529.635
+/vis/scene/add/polylinePoint 108.551 -137.596 619.637
+/vis/scene/add/polylinePoint 117.64 -149.773 675.779
+/vis/scene/add/polylinePoint 155.432 -200.469 909.38
+/vis/scene/add/polylinePoint 170.094 -220.073 1000.0
+/vis/scene/add/polylinePoint -0.570966 -0.217349 -23.7312
+/vis/scene/add/polylinePoint -1.02574 -0.332697 -23.6468
+/vis/scene/add/polylinePoint -1.36534 -0.48694 -23.6892
+/vis/scene/add/polylinePoint -1.64667 -0.593711 -23.6887
+/vis/scene/add/polylinePoint -1.85836 -0.645191 -23.63
+/vis/scene/add/polylinePoint -1.98766 -0.731461 -23.6395
+/vis/scene/add/polylinePoint -2.01263 -0.756129 -23.6453
+/vis/scene/add/polylinePoint -2.01321 -0.757619 -23.6447
+/vis/scene/add/polylinePoint -2.01321 -0.757619 -23.6447
+/vis/scene/add/polylinePoint 1.78809 2.51601 -31.4832
+/vis/scene/add/polylinePoint 3.08914 4.29548 -29.5085
+/vis/scene/add/polylinePoint 4.11402 5.48597 -27.8119
+/vis/scene/add/polylinePoint 4.82522 6.47672 -26.3626
+/vis/scene/add/polylinePoint 5.64742 7.13474 -25.236
+/vis/scene/add/polylinePoint 6.2764 7.6016 -24.2557
+/vis/scene/add/polylinePoint 6.73216 8.06399 -23.4609
+/vis/scene/add/polylinePoint 6.96009 8.54065 -22.8272
+/vis/scene/add/polylinePoint 7.21549 8.78316 -22.2471
+/vis/scene/add/polylinePoint 7.4252 8.92492 -21.7619
+/vis/scene/add/polylinePoint 7.54475 9.05568 -21.3607
+/vis/scene/add/polylinePoint 7.70288 9.16901 -21.0692
+/vis/scene/add/polylinePoint 7.89142 9.26254 -20.8992
+/vis/scene/add/polylinePoint 8.05553 9.35488 -20.8044
+/vis/scene/add/polylinePoint 8.18723 9.36912 -20.7555
+/vis/scene/add/polylinePoint 8.20249 9.36964 -20.7462
+/vis/scene/add/polylinePoint 8.20261 9.36966 -20.7462
+/vis/scene/add/polylinePoint 8.20261 9.36966 -20.7462
+/vis/scene/add/polylinePoint 1.11495e-05 8.44044e-06 -49.1033
+/vis/scene/add/polylinePoint 3.14921 -2.7846 10.9763
+/vis/scene/add/polylinePoint 5.8971 -4.85806 25.8975
+/vis/scene/add/polylinePoint 0.139086 0.000183074 -47.5792
+/vis/scene/add/polylinePoint 1.86871 0.0491247 -42.2484
+/vis/scene/add/polylinePoint 3.53031 0.394729 -36.9556
+/vis/scene/add/polylinePoint 17.7383 4.27899 7.54592
+/vis/scene/add/polylinePoint 19.8976 5.25172 14.9657
+/vis/scene/add/polylinePoint 22.3126 6.15825 22.1569
+/vis/scene/add/polylinePoint -0.00636016 0.00104583 -43.919
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 3.35178 2.76034 -15.0356
+/vis/scene/add/polylinePoint 14.5251 11.1008 -8.32585
+/vis/scene/add/polylinePoint 23.3781 17.0643 -4.25822
+/vis/scene/add/polylinePoint 25.0 17.8963 -3.87899
+/vis/scene/add/polylinePoint 55.1001 30.3507 2.23045
+/vis/scene/add/polylinePoint 211.283 94.9108 33.8726
+/vis/scene/add/polylinePoint 282.093 124.207 48.2936
+/vis/scene/add/polylinePoint 477.54 204.859 88.0337
+/vis/scene/add/polylinePoint 521.061 222.81 96.8175
+/vis/scene/add/polylinePoint 546.123 233.146 101.881
+/vis/scene/add/polylinePoint 636.359 270.434 120.172
+/vis/scene/add/polylinePoint 646.836 274.763 122.296
+/vis/scene/add/polylinePoint 684.382 290.27 129.898
+/vis/scene/add/polylinePoint 826.938 349.018 158.706
+/vis/scene/add/polylinePoint 1000.0 420.047 193.983
+/vis/scene/add/polylinePoint 0.0339892 -0.0440746 -4.88255
+/vis/scene/add/polylinePoint -4.91415 13.486 -11.4811
+/vis/scene/add/polylinePoint -5.57615 17.4069 5.21088
+/vis/scene/add/polylinePoint -6.78199 23.5501 34.2832
+/vis/scene/add/polylinePoint -8.24758 25.0 42.9492
+/vis/scene/add/polylinePoint -11.8336 29.3373 65.0
+/vis/scene/add/polylinePoint -13.4582 31.3039 75.0
+/vis/scene/add/polylinePoint -46.4362 71.2245 277.767
+/vis/scene/add/polylinePoint -46.5393 71.35 278.403
+/vis/scene/add/polylinePoint -75.6405 106.812 457.765
+/vis/scene/add/polylinePoint -80.025 112.164 484.827
+/vis/scene/add/polylinePoint -88.5778 122.596 537.455
+/vis/scene/add/polylinePoint -92.6718 127.689 562.923
+/vis/scene/add/polylinePoint -97.2153 133.341 591.221
+/vis/scene/add/polylinePoint -106.021 144.301 646.043
+/vis/scene/add/polylinePoint -109.476 148.595 667.541
+/vis/scene/add/polylinePoint -118.787 160.164 725.444
+/vis/scene/add/polylinePoint -154.858 205.071 950.611
+/vis/scene/add/polylinePoint -162.752 214.929 1000.0
+/vis/scene/add/polylinePoint -0.000220506 0.00419406 -42.2415
+/vis/scene/add/polylinePoint 0.261754 -0.760931 -22.2878
+/vis/scene/add/polylinePoint 1.56566 -2.58126 -15.3575
+/vis/scene/add/polylinePoint 2.94855 -4.04113 -9.44858
+/vis/scene/add/polylinePoint 3.58288 -4.98474 -4.35887
+/vis/scene/add/polylinePoint 3.94486 -5.48424 -0.132949
+/vis/scene/add/polylinePoint 4.67241 -5.93107 3.19442
+/vis/scene/add/polylinePoint 5.33714 -6.29533 5.77224
+/vis/scene/add/polylinePoint 5.77687 -6.40694 7.87857
+/vis/scene/add/polylinePoint 6.11644 -6.71057 9.51861
+/vis/scene/add/polylinePoint 6.52632 -6.64004 10.8073
+/vis/scene/add/polylinePoint 6.72849 -6.24948 11.7787
+/vis/scene/add/polylinePoint 6.90679 -5.79857 12.4811
+/vis/scene/add/polylinePoint 7.00654 -5.58293 13.1233
+/vis/scene/add/polylinePoint 7.14775 -5.46097 13.6382
+/vis/scene/add/polylinePoint 7.24306 -5.29842 14.0203
+/vis/scene/add/polylinePoint 7.38941 -5.16391 14.2921
+/vis/scene/add/polylinePoint 7.49944 -5.0671 14.502
+/vis/scene/add/polylinePoint 7.55597 -5.00306 14.6796
+/vis/scene/add/polylinePoint 7.57374 -4.97139 14.7984
+/vis/scene/add/polylinePoint 7.57553 -4.97305 14.8027
+/vis/scene/add/polylinePoint 7.57552 -4.97308 14.8027
+/vis/scene/add/polylinePoint 7.57552 -4.97308 14.8027
+/vis/scene/add/polylinePoint -0.00318601 -0.0356741 -33.4652
+/vis/scene/add/polylinePoint -1.36019e-05 -2.43579e-05 -48.9915
+/vis/scene/add/polylinePoint -7.92009e-05 1.16505e-05 -28.7733
+/vis/scene/add/polylinePoint -0.0541548 -0.0143303 -18.5523
+/vis/scene/add/polylinePoint -0.0706919 2.03211 -4.84756
+/vis/scene/add/polylinePoint -0.825747 11.9608 16.8309
+/vis/scene/add/polylinePoint -0.537847 13.4366 20.7092
+/vis/scene/add/polylinePoint -0.33177 15.3508 27.0234
+/vis/scene/add/polylinePoint -0.213671 16.8252 31.6348
+/vis/scene/add/polylinePoint -0.0651389 0.00539012 -21.3338
+/vis/scene/add/polylinePoint 0.611556 -3.32135 -15.2457
+/vis/scene/add/polylinePoint 2.6088 -18.5395 0.341877
+/vis/scene/add/polylinePoint 3.03959 -25.0 7.82294
+/vis/scene/add/polylinePoint 10.8256 -86.247 65.0
+/vis/scene/add/polylinePoint 10.9687 -87.3779 66.0549
+/vis/scene/add/polylinePoint 12.1853 -96.972 75.0
+/vis/scene/add/polylinePoint 38.4934 -305.074 268.747
+/vis/scene/add/polylinePoint 57.1464 -452.728 406.226
+/vis/scene/add/polylinePoint 57.5956 -456.319 409.571
+/vis/scene/add/polylinePoint 58.5406 -463.853 416.59
+/vis/scene/add/polylinePoint 62.5074 -495.521 446.094
+/vis/scene/add/polylinePoint 82.6536 -656.52 596.117
+/vis/scene/add/polylinePoint 90.9667 -723.34 658.523
+/vis/scene/add/polylinePoint 103.463 -823.874 752.251
+/vis/scene/add/polylinePoint 104.25 -830.165 758.113
+/vis/scene/add/polylinePoint 107.972 -859.93 785.862
+/vis/scene/add/polylinePoint 117.863 -938.629 859.258
+/vis/scene/add/polylinePoint 119.539 -952.079 871.825
+/vis/scene/add/polylinePoint 125.513 -1000.0 916.587
+/vis/scene/add/polylinePoint -0.311092 -0.600076 -43.7221
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.0113156 -0.0413349 -22.6766
+/vis/scene/add/polylinePoint -0.0210094 -0.0252764 -43.0097
+/vis/scene/add/polylinePoint -0.187523 -0.228414 -15.5266
+/vis/scene/add/polylinePoint -3.227 -6.30415 15.3367
+/vis/scene/add/polylinePoint -4.61841 -10.8416 50.0
+/vis/scene/add/polylinePoint -3.74418 -12.7398 65.0
+/vis/scene/add/polylinePoint -3.15996 -14.0048 75.0
+/vis/scene/add/polylinePoint 10.4165 -43.4204 307.357
+/vis/scene/add/polylinePoint 17.6924 -59.131 431.887
+/vis/scene/add/polylinePoint 19.3272 -62.6859 460.06
+/vis/scene/add/polylinePoint 22.8518 -70.37 520.976
+/vis/scene/add/polylinePoint 33.2405 -92.935 699.793
+/vis/scene/add/polylinePoint 33.8476 -94.2446 710.149
+/vis/scene/add/polylinePoint 35.2392 -97.247 733.89
+/vis/scene/add/polylinePoint 49.1852 -127.363 971.977
+/vis/scene/add/polylinePoint 50.816 -130.899 1000.0
+/vis/scene/add/polylinePoint 0.0340037 -0.0441096 -4.88259
+/vis/scene/add/polylinePoint -3.35219 -1.03917 -21.9398
+/vis/scene/add/polylinePoint -6.58925 -2.56187 -17.8118
+/vis/scene/add/polylinePoint -7.87331 -4.06978 -14.7387
+/vis/scene/add/polylinePoint -7.08502 -6.68578 -12.5137
+/vis/scene/add/polylinePoint -6.2144 -8.80705 -10.7706
+/vis/scene/add/polylinePoint -5.12214 -10.4876 -9.70224
+/vis/scene/add/polylinePoint -4.38728 -11.8001 -8.63503
+/vis/scene/add/polylinePoint -3.60305 -12.8175 -7.90354
+/vis/scene/add/polylinePoint -3.20789 -13.7468 -7.29453
+/vis/scene/add/polylinePoint -2.88618 -14.5382 -6.88794
+/vis/scene/add/polylinePoint -2.63733 -15.1774 -6.5713
+/vis/scene/add/polylinePoint -2.4477 -15.6795 -6.28133
+/vis/scene/add/polylinePoint -2.28009 -16.0919 -6.06333
+/vis/scene/add/polylinePoint -2.16128 -16.4586 -5.97183
+/vis/scene/add/polylinePoint -2.07793 -16.7524 -5.89995
+/vis/scene/add/polylinePoint -1.96308 -16.9571 -5.81668
+/vis/scene/add/polylinePoint -1.92185 -17.124 -5.73867
+/vis/scene/add/polylinePoint -1.88417 -17.1791 -5.66522
+/vis/scene/add/polylinePoint -1.88391 -17.181 -5.66305
+/vis/scene/add/polylinePoint -1.8839 -17.181 -5.66303
+/vis/scene/add/polylinePoint -1.8839 -17.181 -5.66303
+/vis/scene/add/polylinePoint 1.76423 11.5806 -30.2278
+/vis/scene/add/polylinePoint 2.02735 12.3865 -29.2691
+/vis/scene/add/polylinePoint 6.94615 19.4798 -19.8797
+/vis/scene/add/polylinePoint 12.7454 25.0 -14.2769
+/vis/scene/add/polylinePoint 15.7586 28.1414 -11.7838
+/vis/scene/add/polylinePoint 127.398 144.494 80.5231
+/vis/scene/add/polylinePoint 171.972 191.018 117.426
+/vis/scene/add/polylinePoint 188.971 208.784 131.551
+/vis/scene/add/polylinePoint 215.512 236.523 153.594
+/vis/scene/add/polylinePoint 229.522 251.176 165.255
+/vis/scene/add/polylinePoint 423.018 453.287 326.185
+/vis/scene/add/polylinePoint 445.337 476.645 344.708
+/vis/scene/add/polylinePoint 505.586 539.659 394.746
+/vis/scene/add/polylinePoint 521.706 556.515 408.16
+/vis/scene/add/polylinePoint 560.529 597.187 440.504
+/vis/scene/add/polylinePoint 614.893 654.142 485.814
+/vis/scene/add/polylinePoint 723.555 768.096 576.392
+/vis/scene/add/polylinePoint 749.886 795.656 598.403
+/vis/scene/add/polylinePoint 788.537 836.147 630.763
+/vis/scene/add/polylinePoint 803.411 851.743 643.236
+/vis/scene/add/polylinePoint 829.692 879.325 665.29
+/vis/scene/add/polylinePoint 832.624 882.402 667.749
+/vis/scene/add/polylinePoint 852.701 903.473 684.579
+/vis/scene/add/polylinePoint 885.782 938.164 712.312
+/vis/scene/add/polylinePoint 916.303 970.172 737.827
+/vis/scene/add/polylinePoint 919.443 973.468 740.45
+/vis/scene/add/polylinePoint 920.414 974.486 741.261
+/vis/scene/add/polylinePoint 923.638 977.87 743.954
+/vis/scene/add/polylinePoint 944.736 1000.0 761.581
+/vis/scene/add/polylinePoint 0.0163774 -0.0261707 -23.7476
+/vis/scene/add/polylinePoint 3.32306 -1.79389 -27.7236
+/vis/scene/add/polylinePoint 6.71396 -3.00561 -23.3589
+/vis/scene/add/polylinePoint 9.70403 -2.94358 -19.8214
+/vis/scene/add/polylinePoint 12.0544 -2.99995 -16.9068
+/vis/scene/add/polylinePoint 14.0726 -3.32855 -14.7779
+/vis/scene/add/polylinePoint 15.4055 -3.3583 -12.8373
+/vis/scene/add/polylinePoint 16.3696 -3.6022 -11.1907
+/vis/scene/add/polylinePoint 16.9137 -3.77542 -9.80028
+/vis/scene/add/polylinePoint 17.2432 -3.66646 -8.61646
+/vis/scene/add/polylinePoint 17.228 -3.43137 -7.66264
+/vis/scene/add/polylinePoint 17.1138 -3.30519 -6.92237
+/vis/scene/add/polylinePoint 17.0467 -3.21721 -6.33351
+/vis/scene/add/polylinePoint 16.9552 -3.10411 -5.88132
+/vis/scene/add/polylinePoint 16.838 -3.02866 -5.52973
+/vis/scene/add/polylinePoint 16.8087 -2.92508 -5.25006
+/vis/scene/add/polylinePoint 16.8465 -2.89641 -5.0246
+/vis/scene/add/polylinePoint 16.9164 -2.86015 -4.87397
+/vis/scene/add/polylinePoint 16.9414 -2.85397 -4.816
+/vis/scene/add/polylinePoint 16.9425 -2.85396 -4.8154
+/vis/scene/add/polylinePoint 16.9425 -2.85396 -4.8154
+/vis/scene/add/polylinePoint 1.98735e-05 1.02796e-05 -49.1033
+/vis/scene/add/polylinePoint -0.0447702 -0.0494214 -26.661
+/vis/scene/add/polylinePoint 0.0871098 -0.0510882 -9.87438
+/vis/scene/add/polylinePoint -0.0653575 0.00530064 -21.334
+/vis/scene/add/polylinePoint -4.47551 -4.97507 -34.4833
+/vis/scene/add/polylinePoint -5.23656 -5.49255 -33.234
+/vis/scene/add/polylinePoint -9.79904 -7.85698 -26.2916
+/vis/scene/add/polylinePoint -13.0534 -9.89068 -20.5251
+/vis/scene/add/polylinePoint -14.378 -10.8071 -15.1248
+/vis/scene/add/polylinePoint -15.3655 -11.0954 -10.5844
+/vis/scene/add/polylinePoint -16.5991 -11.4283 -7.1465
+/vis/scene/add/polylinePoint -17.3321 -12.0389 -4.38228
+/vis/scene/add/polylinePoint -17.7584 -12.6808 -2.14272
+/vis/scene/add/polylinePoint -18.4254 -13.1721 -0.366619
+/vis/scene/add/polylinePoint -18.4637 -13.1953 -0.23312
+/vis/scene/add/polylinePoint -18.2581 -12.8125 1.25464
+/vis/scene/add/polylinePoint -18.0626 -12.589 2.45163
+/vis/scene/add/polylinePoint -17.6786 -12.317 3.33451
+/vis/scene/add/polylinePoint -17.3177 -12.0899 3.91475
+/vis/scene/add/polylinePoint -16.9722 -11.9626 4.46351
+/vis/scene/add/polylinePoint -16.7853 -11.9017 4.9413
+/vis/scene/add/polylinePoint -16.7072 -11.8679 5.33383
+/vis/scene/add/polylinePoint -16.6952 -11.8501 5.6627
+/vis/scene/add/polylinePoint -16.6099 -11.8719 5.91002
+/vis/scene/add/polylinePoint -16.5696 -11.8707 6.10521
+/vis/scene/add/polylinePoint -16.4917 -11.8885 6.16605
+/vis/scene/add/polylinePoint -16.4851 -11.8851 6.16643
+/vis/scene/add/polylinePoint -16.485 -11.8851 6.1666
+/vis/scene/add/polylinePoint -16.485 -11.8851 6.1666
+/vis/scene/add/polylinePoint -0.974408 -4.1311 45.415
+/vis/scene/add/polylinePoint -2.13244 -6.18298 50.0
+/vis/scene/add/polylinePoint -2.92757 -13.2429 65.0
+/vis/scene/add/polylinePoint -3.46318 -17.9493 75.0
+/vis/scene/add/polylinePoint -4.43258 -26.5491 93.2681
+/vis/scene/add/polylinePoint -5.78912 -38.5532 118.826
+/vis/scene/add/polylinePoint -11.5161 -89.2193 226.697
+/vis/scene/add/polylinePoint -11.6455 -90.4064 229.212
+/vis/scene/add/polylinePoint -13.878 -110.827 272.461
+/vis/scene/add/polylinePoint -19.1322 -159.406 375.259
+/vis/scene/add/polylinePoint -19.7905 -165.573 388.311
+/vis/scene/add/polylinePoint -21.4419 -180.984 420.919
+/vis/scene/add/polylinePoint -22.0183 -186.367 432.31
+/vis/scene/add/polylinePoint -24.4304 -208.866 479.895
+/vis/scene/add/polylinePoint -24.7482 -211.848 486.202
+/vis/scene/add/polylinePoint -25.3544 -217.672 498.523
+/vis/scene/add/polylinePoint -31.438 -276.123 622.076
+/vis/scene/add/polylinePoint -36.22 -323.659 722.018
+/vis/scene/add/polylinePoint -40.69 -366.999 813.353
+/vis/scene/add/polylinePoint -41.5038 -374.661 829.522
+/vis/scene/add/polylinePoint -41.8991 -378.397 837.4
+/vis/scene/add/polylinePoint -43.7589 -395.855 874.231
+/vis/scene/add/polylinePoint -44.9803 -407.348 898.487
+/vis/scene/add/polylinePoint -46.4193 -420.817 926.946
+/vis/scene/add/polylinePoint -50.1535 -455.425 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.0113526 -0.0412759 -22.6766
+/vis/scene/add/polylinePoint -0.0697586 0.0578914 -16.912
+/vis/scene/add/polylinePoint -2.64126 1.48599 13.2942
+/vis/scene/add/polylinePoint -2.88163 1.51299 16.1937
+/vis/scene/add/polylinePoint -3.16814 1.59773 19.7913
+/vis/scene/add/polylinePoint -5.03692 2.16028 44.5388
+/vis/scene/add/polylinePoint -5.54682 2.32039 50.0
+/vis/scene/add/polylinePoint -7.13754 2.88436 65.0
+/vis/scene/add/polylinePoint -8.1983 3.26048 75.0
+/vis/scene/add/polylinePoint -16.1725 6.08869 150.182
+/vis/scene/add/polylinePoint -23.9833 8.85371 223.803
+/vis/scene/add/polylinePoint -25.898 9.53209 241.842
+/vis/scene/add/polylinePoint -28.128 10.3217 262.844
+/vis/scene/add/polylinePoint -30.2263 11.0653 282.607
+/vis/scene/add/polylinePoint -34.6878 12.6466 324.625
+/vis/scene/add/polylinePoint -37.2865 13.5678 349.1
+/vis/scene/add/polylinePoint -38.9757 14.1665 365.014
+/vis/scene/add/polylinePoint -52.7427 19.0448 494.73
+/vis/scene/add/polylinePoint -70.7541 25.4244 664.582
+/vis/scene/add/polylinePoint -79.9273 28.6643 751.132
+/vis/scene/add/polylinePoint -81.2159 29.1191 763.289
+/vis/scene/add/polylinePoint -85.7618 30.7228 806.169
+/vis/scene/add/polylinePoint -94.4596 33.7906 888.191
+/vis/scene/add/polylinePoint -106.312 37.975 1000.0
+/vis/scene/add/polylinePoint 1.55517e-05 -1.87578e-05 -46.2204
+/vis/scene/add/polylinePoint 0.214002 -0.208835 -39.9648
+/vis/scene/add/polylinePoint 3.51138 -3.21762 -8.5845
+/vis/scene/add/polylinePoint 4.3833 -3.94651 -0.31609
+/vis/scene/add/polylinePoint 5.07029 -4.64886 6.92199
+/vis/scene/add/polylinePoint 5.46561 -4.95261 10.1737
+/vis/scene/add/polylinePoint 5.88329 -5.24939 13.6212
+/vis/scene/add/polylinePoint 6.08224 -5.39314 15.3035
+/vis/scene/add/polylinePoint 7.94639 -6.60599 30.6436
+/vis/scene/add/polylinePoint 10.5355 -8.25925 49.7829
+/vis/scene/add/polylinePoint 10.5662 -8.27722 50.0
+/vis/scene/add/polylinePoint 12.7335 -9.49952 65.0
+/vis/scene/add/polylinePoint 14.1787 -10.3148 75.0
+/vis/scene/add/polylinePoint 29.9007 -19.1756 183.667
+/vis/scene/add/polylinePoint 30.4763 -19.5001 187.651
+/vis/scene/add/polylinePoint 69.0035 -41.1908 454.211
+/vis/scene/add/polylinePoint 81.4287 -48.1767 540.196
+/vis/scene/add/polylinePoint 83.6526 -49.428 555.579
+/vis/scene/add/polylinePoint 126.08 -73.2747 848.992
+/vis/scene/add/polylinePoint 133.166 -77.254 898.047
+/vis/scene/add/polylinePoint 147.896 -85.5214 1000.0
+/vis/scene/add/polylinePoint 3.47785 3.58183 1.59877
+/vis/scene/add/polylinePoint 4.56019 4.00302 9.32174
+/vis/scene/add/polylinePoint 4.68023 4.05285 10.1729
+/vis/scene/add/polylinePoint 6.73565 4.85635 24.2665
+/vis/scene/add/polylinePoint 0.573885 -0.208011 -46.0958
+/vis/scene/add/polylinePoint -2.7158e-05 1.47956e-05 -48.9917
+/vis/scene/add/polylinePoint -2.09633e-05 -1.43018e-05 -48.0194
+/vis/scene/add/polylinePoint -8.62402e-05 2.34734e-05 -28.7734
+/vis/scene/add/polylinePoint -0.890796 -0.465343 37.0974
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.0210392 -0.0252969 -43.0097
+/vis/scene/add/polylinePoint -0.43116 -0.0361158 -13.8341
+/vis/scene/add/polylinePoint -1.14667 -0.244675 -7.56484
+/vis/scene/add/polylinePoint -3.4779 -1.57659 18.3574
+/vis/scene/add/polylinePoint -6.57326 -3.95769 50.0
+/vis/scene/add/polylinePoint -7.04475 -5.29975 65.0
+/vis/scene/add/polylinePoint -7.35929 -6.19459 75.0
+/vis/scene/add/polylinePoint -7.79412 -7.43274 88.8359
+/vis/scene/add/polylinePoint -8.29227 -8.8529 104.71
+/vis/scene/add/polylinePoint -14.5945 -26.8307 305.63
+/vis/scene/add/polylinePoint -15.6149 -29.7666 338.428
+/vis/scene/add/polylinePoint -16.7044 -32.9009 373.455
+/vis/scene/add/polylinePoint -17.7071 -35.7827 405.634
+/vis/scene/add/polylinePoint -23.1818 -51.5385 581.711
+/vis/scene/add/polylinePoint -26.5393 -61.1947 689.615
+/vis/scene/add/polylinePoint -29.8175 -70.6101 794.925
+/vis/scene/add/polylinePoint -36.1969 -88.9423 1000.0
+/vis/scene/add/polylinePoint 0.493576 0.168721 2.00583
+/vis/scene/add/polylinePoint 0.558593 0.387089 2.21043
+/vis/scene/add/polylinePoint 0.554323 0.585991 2.35285
+/vis/scene/add/polylinePoint 0.583196 0.755038 2.42368
+/vis/scene/add/polylinePoint 0.563004 0.826572 2.44878
+/vis/scene/add/polylinePoint 0.562815 0.827806 2.44937
+/vis/scene/add/polylinePoint 0.562815 0.827806 2.44937
+/vis/scene/add/polylinePoint 7.285 10.4527 9.37834
+/vis/scene/add/polylinePoint 8.53151 11.5794 13.193
+/vis/scene/add/polylinePoint -11.4384 14.6142 -43.1963
+/vis/scene/add/polylinePoint -16.1686 20.2588 -47.0174
+/vis/scene/add/polylinePoint -19.6258 25.0 -49.2178
+/vis/scene/add/polylinePoint -108.166 144.38 -101.671
+/vis/scene/add/polylinePoint -152.309 203.865 -127.823
+/vis/scene/add/polylinePoint -168.604 225.766 -137.474
+/vis/scene/add/polylinePoint -171.399 229.519 -139.129
+/vis/scene/add/polylinePoint -210.607 282.167 -162.331
+/vis/scene/add/polylinePoint -236.286 316.649 -177.509
+/vis/scene/add/polylinePoint -243.302 326.081 -181.662
+/vis/scene/add/polylinePoint -302.858 406.086 -216.9
+/vis/scene/add/polylinePoint -311.602 417.829 -222.064
+/vis/scene/add/polylinePoint -353.908 474.65 -247.16
+/vis/scene/add/polylinePoint -393.737 528.123 -270.795
+/vis/scene/add/polylinePoint -410.348 550.434 -280.666
+/vis/scene/add/polylinePoint -456.615 612.495 -308.085
+/vis/scene/add/polylinePoint -517.734 694.494 -344.432
+/vis/scene/add/polylinePoint -590.322 791.744 -387.69
+/vis/scene/add/polylinePoint -631.739 847.144 -412.315
+/vis/scene/add/polylinePoint -692.277 928.024 -448.314
+/vis/scene/add/polylinePoint -713.836 956.834 -461.109
+/vis/scene/add/polylinePoint -723.596 969.898 -466.91
+/vis/scene/add/polylinePoint -746.097 1000.0 -480.282
+/vis/scene/add/polylinePoint -0.0134527 -0.020152 -27.0758
+/vis/scene/add/polylinePoint -0.577104 1.00268 -4.67626
+/vis/scene/add/polylinePoint -0.778918 1.29964 -0.376946
+/vis/scene/add/polylinePoint -1.58697 2.49217 16.4843
+/vis/scene/add/polylinePoint -3.1977 4.64921 50.0
+/vis/scene/add/polylinePoint -3.81769 5.43479 65.0
+/vis/scene/add/polylinePoint -4.23095 5.95853 75.0
+/vis/scene/add/polylinePoint -10.7291 14.1914 232.202
+/vis/scene/add/polylinePoint -15.7623 20.5551 353.819
+/vis/scene/add/polylinePoint -18.3933 23.8796 417.37
+/vis/scene/add/polylinePoint -21.4635 27.7612 491.525
+/vis/scene/add/polylinePoint -23.9096 30.8537 550.606
+/vis/scene/add/polylinePoint -36.3914 46.6295 852.075
+/vis/scene/add/polylinePoint -39.3088 50.3319 922.772
+/vis/scene/add/polylinePoint -39.6522 50.7682 931.105
+/vis/scene/add/polylinePoint -41.8911 53.6111 985.424
+/vis/scene/add/polylinePoint -42.4916 54.3741 1000.0
+/vis/scene/add/polylinePoint 3.13411 3.36081 -29.0802
+/vis/scene/add/polylinePoint 4.77082 5.27947 -21.6361
+/vis/scene/add/polylinePoint 5.5169 6.04824 -18.4051
+/vis/scene/add/polylinePoint 8.83846 9.4686 -4.44898
+/vis/scene/add/polylinePoint 15.4455 15.9913 24.6709
+/vis/scene/add/polylinePoint 20.376 23.5085 50.0
+/vis/scene/add/polylinePoint 23.9962 28.0136 65.0
+/vis/scene/add/polylinePoint 24.4512 28.5799 66.8855
+/vis/scene/add/polylinePoint 26.4106 31.0169 75.0
+/vis/scene/add/polylinePoint 80.0763 97.7653 297.28
+/vis/scene/add/polylinePoint 94.114 115.211 355.402
+/vis/scene/add/polylinePoint 114.132 140.098 438.306
+/vis/scene/add/polylinePoint 139.152 171.18 541.897
+/vis/scene/add/polylinePoint 145.62 179.232 568.722
+/vis/scene/add/polylinePoint 151.991 187.165 595.151
+/vis/scene/add/polylinePoint 166.852 205.667 656.799
+/vis/scene/add/polylinePoint 177.795 219.307 702.253
+/vis/scene/add/polylinePoint 190.152 234.704 753.561
+/vis/scene/add/polylinePoint 195.189 240.982 774.485
+/vis/scene/add/polylinePoint 224.131 277.047 894.681
+/vis/scene/add/polylinePoint 249.511 308.642 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.17857 -0.114795 -22.2568
+/vis/scene/add/polylinePoint 0.375043 -0.12079 1.7765
+/vis/scene/add/polylinePoint 0.0355234 -0.233228 33.7797
+/vis/scene/add/polylinePoint 2.37567 1.13569 -46.1982
+/vis/scene/add/polylinePoint 0.118846 -0.192879 -23.1801
+/vis/scene/add/polylinePoint 0.31669 -0.507424 -22.1291
+/vis/scene/add/polylinePoint 9.25474 -14.415 25.0055
+/vis/scene/add/polylinePoint 11.3721 -17.5744 37.0272
+/vis/scene/add/polylinePoint 11.8042 -18.3728 39.8409
+/vis/scene/add/polylinePoint 12.7894 -21.5882 50.0
+/vis/scene/add/polylinePoint 13.7584 -26.613 65.0
+/vis/scene/add/polylinePoint 14.405 -29.9631 75.0
+/vis/scene/add/polylinePoint 15.388 -35.0484 90.1791
+/vis/scene/add/polylinePoint 17.4275 -45.5936 121.647
+/vis/scene/add/polylinePoint 17.8104 -47.5796 127.574
+/vis/scene/add/polylinePoint 30.6247 -114.001 325.815
+/vis/scene/add/polylinePoint 31.6345 -119.278 341.59
+/vis/scene/add/polylinePoint 36.9364 -146.963 424.36
+/vis/scene/add/polylinePoint 38.525 -155.336 449.382
+/vis/scene/add/polylinePoint 43.297 -180.612 524.877
+/vis/scene/add/polylinePoint 69.2585 -317.583 934.388
+/vis/scene/add/polylinePoint 69.5842 -319.303 939.54
+/vis/scene/add/polylinePoint 70.0859 -321.95 947.469
+/vis/scene/add/polylinePoint 72.0893 -332.502 979.073
+/vis/scene/add/polylinePoint 73.1341 -337.978 995.479
+/vis/scene/add/polylinePoint 73.4216 -339.488 1000.0
+/vis/scene/add/polylinePoint 2.66668 1.42548 -27.354
+/vis/scene/add/polylinePoint 6.14246 3.65909 -18.8344
+/vis/scene/add/polylinePoint 7.10286 4.23923 -16.4865
+/vis/scene/add/polylinePoint 14.5009 9.24362 12.8882
+/vis/scene/add/polylinePoint 15.5691 9.66198 15.206
+/vis/scene/add/polylinePoint 16.4957 10.1312 18.7287
+/vis/scene/add/polylinePoint 21.6984 14.3111 39.9176
+/vis/scene/add/polylinePoint 25.0 17.5563 45.9662
+/vis/scene/add/polylinePoint 34.8079 25.7792 65.0
+/vis/scene/add/polylinePoint 37.4769 28.0166 70.1797
+/vis/scene/add/polylinePoint 39.9781 30.0994 75.0
+/vis/scene/add/polylinePoint 76.3759 60.4112 145.151
+/vis/scene/add/polylinePoint 92.7273 74.0155 176.676
+/vis/scene/add/polylinePoint 150.1 121.746 287.253
+/vis/scene/add/polylinePoint 166.69 135.551 319.239
+/vis/scene/add/polylinePoint 309.159 253.959 593.816
+/vis/scene/add/polylinePoint 409.552 337.758 787.341
+/vis/scene/add/polylinePoint 508.477 420.128 977.925
+/vis/scene/add/polylinePoint 510.356 421.685 981.54
+/vis/scene/add/polylinePoint 516.781 427.01 993.904
+/vis/scene/add/polylinePoint 519.949 429.634 1000.0
+/vis/scene/add/polylinePoint -1.5735e-05 6.39865e-06 -48.9917
+/vis/scene/add/polylinePoint 1.45028 0.543454 -45.6068
+/vis/scene/add/polylinePoint 5.3239 1.99016 -41.7609
+/vis/scene/add/polylinePoint -0.302151 -0.0999582 -25.092
+/vis/scene/add/polylinePoint -1.29669 -0.295741 -18.5336
+/vis/scene/add/polylinePoint -0.672621 1.39523 28.5273
+/vis/scene/add/polylinePoint -0.725773 1.97111 28.0831
+/vis/scene/add/polylinePoint -1.67162 2.86701 26.318
+/vis/scene/add/polylinePoint -2.3185 3.14931 24.7876
+/vis/scene/add/polylinePoint -2.99853 3.42608 23.6298
+/vis/scene/add/polylinePoint -3.33518 3.50041 22.5729
+/vis/scene/add/polylinePoint -3.64472 3.48666 21.7308
+/vis/scene/add/polylinePoint -3.70654 3.37274 21.02
+/vis/scene/add/polylinePoint -3.82929 3.2813 20.4815
+/vis/scene/add/polylinePoint -3.97344 3.23139 20.0659
+/vis/scene/add/polylinePoint -4.07481 3.13053 19.7496
+/vis/scene/add/polylinePoint -4.18552 3.06883 19.5149
+/vis/scene/add/polylinePoint -4.288 3.05961 19.3373
+/vis/scene/add/polylinePoint -4.35169 3.03617 19.2247
+/vis/scene/add/polylinePoint -4.35734 3.04002 19.2185
+/vis/scene/add/polylinePoint -4.35736 3.04014 19.2184
+/vis/scene/add/polylinePoint -4.35736 3.04014 19.2184
+/vis/scene/add/polylinePoint -0.201249 -0.380674 -4.27794
+/vis/scene/add/polylinePoint -1.01061 -2.0296 19.558
+/vis/scene/add/polylinePoint -2.13428 -4.06171 41.4511
+/vis/scene/add/polylinePoint -2.70883 -4.78526 50.0
+/vis/scene/add/polylinePoint -3.56824 -6.01713 65.0
+/vis/scene/add/polylinePoint -4.14112 -6.83808 75.0
+/vis/scene/add/polylinePoint -4.18587 -6.90212 75.7808
+/vis/scene/add/polylinePoint -4.77461 -7.74418 86.0487
+/vis/scene/add/polylinePoint -8.55463 -13.1449 151.917
+/vis/scene/add/polylinePoint -14.5264 -21.679 255.893
+/vis/scene/add/polylinePoint -20.5304 -30.2725 360.531
+/vis/scene/add/polylinePoint -28.9242 -42.2657 506.845
+/vis/scene/add/polylinePoint -44.2157 -64.1243 773.53
+/vis/scene/add/polylinePoint -44.396 -64.3813 776.67
+/vis/scene/add/polylinePoint -44.7779 -64.9255 783.319
+/vis/scene/add/polylinePoint -53.408 -77.2315 933.675
+/vis/scene/add/polylinePoint -57.21 -82.6612 1000.0
+/vis/scene/add/polylinePoint -0.0653495 0.00519336 -21.3339
+/vis/scene/add/polylinePoint -0.890803 -0.465357 37.0975
+/vis/scene/add/polylinePoint 0.211961 0.363068 35.127
+/vis/scene/add/polylinePoint 10.2328 5.13925 50.0
+/vis/scene/add/polylinePoint 16.0098 8.47216 57.6878
+/vis/scene/add/polylinePoint 21.5039 11.6421 65.0
+/vis/scene/add/polylinePoint 26.1969 14.3474 71.2445
+/vis/scene/add/polylinePoint 29.0208 15.9743 75.0
+/vis/scene/add/polylinePoint 164.675 94.0921 255.365
+/vis/scene/add/polylinePoint 267.159 153.005 391.603
+/vis/scene/add/polylinePoint 303.793 174.09 440.298
+/vis/scene/add/polylinePoint 330.691 189.571 476.036
+/vis/scene/add/polylinePoint 495.182 284.274 694.702
+/vis/scene/add/polylinePoint 527.141 302.649 737.096
+/vis/scene/add/polylinePoint 606.145 348.018 841.872
+/vis/scene/add/polylinePoint 642.39 368.867 890.003
+/vis/scene/add/polylinePoint 650.825 373.72 901.208
+/vis/scene/add/polylinePoint 691.531 397.137 955.277
+/vis/scene/add/polylinePoint 725.216 416.512 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.14818 0.0521336 -22.7198
+/vis/scene/add/polylinePoint 0.179745 0.0835669 -22.7079
+/vis/scene/add/polylinePoint 0.179658 0.0838648 -22.7071
+/vis/scene/add/polylinePoint 0.179658 0.0838648 -22.7071
+/vis/scene/add/polylinePoint -2.34121 -2.5212 48.4065
+/vis/scene/add/polylinePoint -2.60912 -2.66667 50.0
+/vis/scene/add/polylinePoint -5.06752 -4.29463 65.0
+/vis/scene/add/polylinePoint -6.70668 -5.37856 75.0
+/vis/scene/add/polylinePoint -22.5256 -15.8848 171.662
+/vis/scene/add/polylinePoint -26.1157 -18.2772 193.609
+/vis/scene/add/polylinePoint -29.9609 -20.8413 217.127
+/vis/scene/add/polylinePoint -33.1801 -22.9879 236.82
+/vis/scene/add/polylinePoint -46.4268 -31.8171 317.887
+/vis/scene/add/polylinePoint -60.4061 -41.1317 403.191
+/vis/scene/add/polylinePoint -67.6085 -45.9363 447.075
+/vis/scene/add/polylinePoint -77.3431 -52.4374 506.359
+/vis/scene/add/polylinePoint -127.638 -85.9531 812.962
+/vis/scene/add/polylinePoint -149.45 -100.364 945.69
+/vis/scene/add/polylinePoint -155.266 -104.167 981.017
+/vis/scene/add/polylinePoint -158.401 -106.216 1000.0
+/vis/scene/add/polylinePoint -4.03109 3.27024 -46.7062
+/vis/scene/add/polylinePoint -13.0209 11.008 -41.9565
+/vis/scene/add/polylinePoint -15.0096 12.8655 -40.9112
+/vis/scene/add/polylinePoint 0.337255 -0.829937 -12.5214
+/vis/scene/add/polylinePoint 2.24372 -2.85833 15.6058
+/vis/scene/add/polylinePoint 3.25869 -3.92565 27.7345
+/vis/scene/add/polylinePoint 0.664469 0.961052 -18.1049
+/vis/scene/add/polylinePoint 15.5605 23.4483 -5.55798
+/vis/scene/add/polylinePoint 16.5116 25.0 -4.86923
+/vis/scene/add/polylinePoint 104.045 157.933 51.799
+/vis/scene/add/polylinePoint 113.4 172.139 57.8633
+/vis/scene/add/polylinePoint 361.035 548.298 218.302
+/vis/scene/add/polylinePoint 402.879 611.777 245.273
+/vis/scene/add/polylinePoint 504.738 766.297 310.96
+/vis/scene/add/polylinePoint 556.214 844.378 344.227
+/vis/scene/add/polylinePoint 656.396 996.286 408.872
+/vis/scene/add/polylinePoint 658.447 999.394 410.195
+/vis/scene/add/polylinePoint 658.847 1000.0 410.453
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.0210055 -0.0252803 -43.0097
+/vis/scene/add/polylinePoint -6.42625 -7.05093 -21.1705
+/vis/scene/add/polylinePoint -14.8168 -20.1639 4.12836
+/vis/scene/add/polylinePoint -15.6451 -25.0 12.4048
+/vis/scene/add/polylinePoint -16.996 -53.4972 63.7435
+/vis/scene/add/polylinePoint -17.0293 -54.1945 65.0
+/vis/scene/add/polylinePoint -17.294 -59.7435 75.0
+/vis/scene/add/polylinePoint -17.7632 -69.6719 92.8951
+/vis/scene/add/polylinePoint -25.0236 -224.291 371.786
+/vis/scene/add/polylinePoint -25.6814 -238.428 397.262
+/vis/scene/add/polylinePoint -27.4983 -277.702 467.988
+/vis/scene/add/polylinePoint -29.546 -322.913 549.516
+/vis/scene/add/polylinePoint -32.5317 -389.402 669.412
+/vis/scene/add/polylinePoint -40.6426 -571.217 997.657
+/vis/scene/add/polylinePoint -40.6994 -572.515 1000.0
+/vis/scene/add/polylinePoint 0.0547634 -0.457029 30.7843
+/vis/scene/add/polylinePoint -0.345106 -3.54315 9.66143
+/vis/scene/add/polylinePoint -2.30587 -6.37658 21.3112
+/vis/scene/add/polylinePoint -2.99597 -7.21832 24.8047
+/vis/scene/add/polylinePoint -9.46178 -11.9244 48.8278
+/vis/scene/add/polylinePoint -9.72315 -12.1464 50.0
+/vis/scene/add/polylinePoint -9.94258 -12.3306 50.9138
+/vis/scene/add/polylinePoint -13.3264 -15.1705 65.0
+/vis/scene/add/polylinePoint -13.7026 -15.4865 66.5666
+/vis/scene/add/polylinePoint -15.7307 -17.1863 75.0
+/vis/scene/add/polylinePoint -19.2328 -20.1232 89.5615
+/vis/scene/add/polylinePoint -19.3097 -20.1876 89.8809
+/vis/scene/add/polylinePoint -47.7404 -44.0344 207.848
+/vis/scene/add/polylinePoint -66.375 -59.7082 285.29
+/vis/scene/add/polylinePoint -85.5613 -75.8167 364.825
+/vis/scene/add/polylinePoint -97.7139 -86.0295 415.225
+/vis/scene/add/polylinePoint -122.975 -107.209 519.805
+/vis/scene/add/polylinePoint -189.355 -162.947 795.073
+/vis/scene/add/polylinePoint -198.531 -170.639 833.034
+/vis/scene/add/polylinePoint -228.658 -195.891 957.773
+/vis/scene/add/polylinePoint -238.838 -204.425 1000.0
+/vis/scene/add/polylinePoint -0.0867037 0.215635 34.6822
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.79943 1.85502 36.3401
+/vis/scene/add/polylinePoint 12.1916 9.76182 46.6951
+/vis/scene/add/polylinePoint 14.6248 12.1565 50.0
+/vis/scene/add/polylinePoint 25.2123 21.7251 64.5829
+/vis/scene/add/polylinePoint 25.515 21.9987 65.0
+/vis/scene/add/polylinePoint 32.7723 28.5586 75.0
+/vis/scene/add/polylinePoint 71.2378 63.3106 127.918
+/vis/scene/add/polylinePoint 87.908 78.3785 150.879
+/vis/scene/add/polylinePoint 107.315 95.9117 177.605
+/vis/scene/add/polylinePoint 163.322 146.52 254.737
+/vis/scene/add/polylinePoint 170.91 153.383 265.192
+/vis/scene/add/polylinePoint 195.668 175.791 299.324
+/vis/scene/add/polylinePoint 249.563 224.563 373.61
+/vis/scene/add/polylinePoint 256.448 230.787 383.102
+/vis/scene/add/polylinePoint 340.528 306.774 498.975
+/vis/scene/add/polylinePoint 475.031 428.527 684.546
+/vis/scene/add/polylinePoint 488.821 440.998 703.573
+/vis/scene/add/polylinePoint 497.402 448.759 715.42
+/vis/scene/add/polylinePoint 548.432 494.882 785.84
+/vis/scene/add/polylinePoint 696.131 628.266 989.733
+/vis/scene/add/polylinePoint 703.585 634.988 1000.0
+/vis/scene/add/polylinePoint -9.49308e-06 -8.3926e-06 -49.9987
+/vis/scene/add/polylinePoint 1.20366 -4.86842 -14.8267
+/vis/scene/add/polylinePoint 3.49176 -12.5908 0.217962
+/vis/scene/add/polylinePoint -0.00310132 -0.0356311 -33.4653
+/vis/scene/add/polylinePoint 0.0549236 -0.45714 30.7843
+/vis/scene/add/polylinePoint 5.81733 6.17825 -14.8486
+/vis/scene/add/polylinePoint 10.5955 11.0286 -18.7189
+/vis/scene/add/polylinePoint 14.395 15.1028 -21.2491
+/vis/scene/add/polylinePoint 17.2011 18.9227 -22.9228
+/vis/scene/add/polylinePoint 17.4143 19.1824 -22.9697
+/vis/scene/add/polylinePoint -0.0867028 0.215625 34.6821
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 3.08753 -2.79451 50.0
+/vis/scene/add/polylinePoint 5.58515 -4.55495 65.0
+/vis/scene/add/polylinePoint 7.25042 -5.72953 75.0
+/vis/scene/add/polylinePoint 24.7518 -18.0609 180.054
+/vis/scene/add/polylinePoint 31.8837 -23.1074 223.02
+/vis/scene/add/polylinePoint 49.9267 -35.8411 331.398
+/vis/scene/add/polylinePoint 68.2305 -48.6609 440.419
+/vis/scene/add/polylinePoint 118.319 -83.7084 738.773
+/vis/scene/add/polylinePoint 162.269 -114.247 1000.0
+/vis/scene/add/polylinePoint 0.511757 -0.160844 31.6224
+/vis/scene/add/polylinePoint 0.0549026 -0.457211 30.7841
+/vis/scene/add/polylinePoint -0.890804 -0.465359 37.0974
+/vis/scene/add/polylinePoint 3.29049 2.34523 43.7784
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -6.39542 10.1193 -9.51373
+/vis/scene/add/polylinePoint -10.4124 18.5321 2.1402
+/vis/scene/add/polylinePoint -12.7712 23.5563 8.23234
+/vis/scene/add/polylinePoint 4.21295 -4.32917 25.7573
+/vis/scene/add/polylinePoint 4.29658 -4.32815 26.4141
+/vis/scene/add/polylinePoint 7.82098 -4.16619 50.0
+/vis/scene/add/polylinePoint 12.6518 -4.96344 65.0
+/vis/scene/add/polylinePoint 15.8721 -5.492 75.0
+/vis/scene/add/polylinePoint 39.1436 -9.31401 147.251
+/vis/scene/add/polylinePoint 85.3041 -16.9238 290.574
+/vis/scene/add/polylinePoint 91.4481 -17.9436 309.669
+/vis/scene/add/polylinePoint 98.752 -19.1636 332.397
+/vis/scene/add/polylinePoint 129.468 -24.3064 428.002
+/vis/scene/add/polylinePoint 178.69 -32.7244 580.488
+/vis/scene/add/polylinePoint 247.808 -44.7575 793.833
+/vis/scene/add/polylinePoint 275.63 -49.544 879.345
+/vis/scene/add/polylinePoint 288.384 -51.7258 918.511
+/vis/scene/add/polylinePoint 314.93 -56.2842 1000.0
+/vis/scene/add/polylinePoint 3.70343 4.16436 38.9722
+/vis/scene/add/polylinePoint 8.82179 13.0444 50.0
+/vis/scene/add/polylinePoint 16.8221 24.8556 65.0
+/vis/scene/add/polylinePoint 22.1553 32.7309 75.0
+/vis/scene/add/polylinePoint 43.3801 64.0614 114.781
+/vis/scene/add/polylinePoint 68.2539 100.783 161.408
+/vis/scene/add/polylinePoint 72.8603 107.581 170.043
+/vis/scene/add/polylinePoint 94.9749 140.221 211.494
+/vis/scene/add/polylinePoint 110.064 162.507 239.801
+/vis/scene/add/polylinePoint 177.807 262.623 366.981
+/vis/scene/add/polylinePoint 186.901 276.066 384.053
+/vis/scene/add/polylinePoint 219.399 324.102 445.057
+/vis/scene/add/polylinePoint 295.063 435.935 587.061
+/vis/scene/add/polylinePoint 299.858 443.028 596.062
+/vis/scene/add/polylinePoint 486.377 718.852 946.119
+/vis/scene/add/polylinePoint 515.157 761.317 1000.0
+/vis/scene/add/polylinePoint -0.0653682 0.00527519 -21.334
+/vis/scene/add/polylinePoint -0.08671 0.215618 34.6822
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -4.50441 4.24512 -38.5914
+/vis/scene/add/polylinePoint -5.97495 5.30349 -35.936
+/vis/scene/add/polylinePoint -9.08149 8.51709 -29.5871
+/vis/scene/add/polylinePoint -13.0786 12.2452 -22.1736
+/vis/scene/add/polylinePoint -22.4817 21.0107 -5.70037
+/vis/scene/add/polylinePoint -25.0 23.1394 0.744974
+/vis/scene/add/polylinePoint -55.3218 42.4018 65.0
+/vis/scene/add/polylinePoint -60.0365 45.3991 75.0
+/vis/scene/add/polylinePoint -63.9945 47.9173 83.3964
+/vis/scene/add/polylinePoint -78.5093 57.1507 114.186
+/vis/scene/add/polylinePoint -86.451 62.2055 131.024
+/vis/scene/add/polylinePoint -255.077 169.545 488.419
+/vis/scene/add/polylinePoint -308.606 203.498 601.83
+/vis/scene/add/polylinePoint -308.987 203.739 602.637
+/vis/scene/add/polylinePoint -326.797 215.002 640.327
+/vis/scene/add/polylinePoint -368.408 241.308 728.437
+/vis/scene/add/polylinePoint -411.014 268.231 818.77
+/vis/scene/add/polylinePoint -417.468 272.306 832.447
+/vis/scene/add/polylinePoint -417.749 272.483 833.043
+/vis/scene/add/polylinePoint -491.639 319.089 989.463
+/vis/scene/add/polylinePoint -496.618 322.219 1000.0
+/vis/scene/add/polylinePoint 0.506637 -0.302594 31.6632
+/vis/scene/add/polylinePoint -4.99903 -12.4742 50.0
+/vis/scene/add/polylinePoint -9.82441 -23.025 65.0
+/vis/scene/add/polylinePoint -11.9252 -27.6164 71.5298
+/vis/scene/add/polylinePoint -13.0418 -30.0561 75.0
+/vis/scene/add/polylinePoint -13.5993 -31.2741 76.732
+/vis/scene/add/polylinePoint -19.6852 -44.5644 95.6357
+/vis/scene/add/polylinePoint -55.3044 -122.253 206.198
+/vis/scene/add/polylinePoint -65.021 -143.449 236.294
+/vis/scene/add/polylinePoint -86.1169 -189.467 301.541
+/vis/scene/add/polylinePoint -94.5384 -207.821 327.56
+/vis/scene/add/polylinePoint -97.1965 -213.613 335.766
+/vis/scene/add/polylinePoint -126.727 -277.972 426.95
+/vis/scene/add/polylinePoint -137.862 -302.204 461.275
+/vis/scene/add/polylinePoint -162.437 -355.696 537.101
+/vis/scene/add/polylinePoint -192.172 -420.359 628.714
+/vis/scene/add/polylinePoint -304.027 -663.493 973.497
+/vis/scene/add/polylinePoint -312.628 -682.206 1000.0
+/vis/scene/add/polylinePoint 3.97366 -1.61118 47.6068
+/vis/scene/add/polylinePoint 4.65681 -1.79706 50.0
+/vis/scene/add/polylinePoint 8.71134 -2.75996 65.0
+/vis/scene/add/polylinePoint 11.4128 -3.40244 75.0
+/vis/scene/add/polylinePoint 12.2836 -3.60951 78.2245
+/vis/scene/add/polylinePoint 31.6971 -8.23029 150.112
+/vis/scene/add/polylinePoint 32.7471 -8.4791 153.998
+/vis/scene/add/polylinePoint 45.3185 -11.4535 200.508
+/vis/scene/add/polylinePoint 100.265 -24.464 403.633
+/vis/scene/add/polylinePoint 130.629 -31.6711 515.579
+/vis/scene/add/polylinePoint 145.316 -35.1757 569.722
+/vis/scene/add/polylinePoint 151.701 -36.6995 593.252
+/vis/scene/add/polylinePoint 199.994 -48.2321 771.258
+/vis/scene/add/polylinePoint 204.984 -49.4271 789.667
+/vis/scene/add/polylinePoint 205.153 -49.4678 790.293
+/vis/scene/add/polylinePoint 262.01 -63.0781 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.657369 0.207391 -16.0355
+/vis/scene/add/polylinePoint -3.90941 1.64496 -10.7841
+/vis/scene/add/polylinePoint -12.1394 5.13515 2.00749
+/vis/scene/add/polylinePoint -13.1271 5.41528 3.13744
+/vis/scene/add/polylinePoint -20.9177 8.47008 11.8292
+/vis/scene/add/polylinePoint -23.2422 9.65114 14.3297
+/vis/scene/add/polylinePoint -2.97474 3.28991 -50.0
+/vis/scene/add/polylinePoint -35.099 31.0932 -62.4359
+/vis/scene/add/polylinePoint -37.0273 32.7619 -63.181
+/vis/scene/add/polylinePoint -131.667 114.624 -99.7345
+/vis/scene/add/polylinePoint -157.921 137.329 -109.884
+/vis/scene/add/polylinePoint -167.738 145.825 -113.672
+/vis/scene/add/polylinePoint -217.498 188.817 -132.816
+/vis/scene/add/polylinePoint -258.059 223.861 -148.411
+/vis/scene/add/polylinePoint -328.752 284.837 -175.606
+/vis/scene/add/polylinePoint -332.414 287.99 -177.016
+/vis/scene/add/polylinePoint -359.771 311.545 -187.552
+/vis/scene/add/polylinePoint -387.405 335.353 -198.181
+/vis/scene/add/polylinePoint -448.444 387.953 -221.685
+/vis/scene/add/polylinePoint -482.669 417.456 -234.878
+/vis/scene/add/polylinePoint -496.497 429.393 -240.216
+/vis/scene/add/polylinePoint -751.366 649.481 -338.621
+/vis/scene/add/polylinePoint -825.969 713.777 -367.395
+/vis/scene/add/polylinePoint -842.918 728.363 -373.928
+/vis/scene/add/polylinePoint -853.465 737.432 -377.988
+/vis/scene/add/polylinePoint -883.5 763.251 -389.547
+/vis/scene/add/polylinePoint -918.221 793.099 -402.883
+/vis/scene/add/polylinePoint -956.169 825.752 -417.466
+/vis/scene/add/polylinePoint -966.513 834.656 -421.452
+/vis/scene/add/polylinePoint -1000.0 863.497 -434.357
+/vis/scene/add/polylinePoint -2.50212 2.13362 -25.6813
+/vis/scene/add/polylinePoint -4.24867 3.57177 -29.4556
+/vis/scene/add/polylinePoint -5.31185 4.41529 -32.6366
+/vis/scene/add/polylinePoint -6.40891 5.11556 -35.1877
+/vis/scene/add/polylinePoint -7.02423 5.726 -37.3168
+/vis/scene/add/polylinePoint -7.47722 6.11238 -39.1119
+/vis/scene/add/polylinePoint -7.75599 6.44367 -40.5374
+/vis/scene/add/polylinePoint -8.1908 6.61401 -41.633
+/vis/scene/add/polylinePoint -8.46568 6.76139 -42.5172
+/vis/scene/add/polylinePoint -8.72268 6.90033 -43.1819
+/vis/scene/add/polylinePoint -9.04884 6.89003 -43.6446
+/vis/scene/add/polylinePoint -9.17008 6.92109 -44.0647
+/vis/scene/add/polylinePoint -9.2556 6.96055 -44.4048
+/vis/scene/add/polylinePoint -9.2758 6.9989 -44.687
+/vis/scene/add/polylinePoint -9.28141 6.98751 -44.9043
+/vis/scene/add/polylinePoint -9.31477 7.00474 -45.0554
+/vis/scene/add/polylinePoint -9.31989 7.01616 -45.0935
+/vis/scene/add/polylinePoint -9.31996 7.0164 -45.094
+/vis/scene/add/polylinePoint -9.31996 7.0164 -45.094
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.5166e-05 -5.84788e-06 -49.1033
+/vis/scene/add/polylinePoint -1.14357 -1.89128 28.0564
+/vis/scene/add/polylinePoint 1.70657 1.53085 34.1067
+/vis/scene/add/polylinePoint 5.05033 5.92596 40.3202
+/vis/scene/add/polylinePoint 9.52443 9.25608 43.8876
+/vis/scene/add/polylinePoint 13.1641 12.4365 46.6903
+/vis/scene/add/polylinePoint 16.0145 15.2457 48.5889
+/vis/scene/add/polylinePoint 16.5746 15.7409 49.0094
+/vis/scene/add/polylinePoint 17.5257 17.0724 50.0
+/vis/scene/add/polylinePoint 24.4807 25.7081 55.6657
+/vis/scene/add/polylinePoint 35.9324 39.937 65.0
+/vis/scene/add/polylinePoint 48.212 55.1741 75.0
+/vis/scene/add/polylinePoint 60.0667 69.9044 84.6572
+/vis/scene/add/polylinePoint 86.011 102.143 105.815
+/vis/scene/add/polylinePoint 113.484 136.303 128.184
+/vis/scene/add/polylinePoint 115.631 138.967 129.932
+/vis/scene/add/polylinePoint 128.76 155.261 140.623
+/vis/scene/add/polylinePoint 130.974 158.009 142.428
+/vis/scene/add/polylinePoint 174.009 211.477 177.53
+/vis/scene/add/polylinePoint 238.981 291.951 230.584
+/vis/scene/add/polylinePoint 256.434 313.53 244.842
+/vis/scene/add/polylinePoint 326.403 399.981 302.085
+/vis/scene/add/polylinePoint 355.342 435.504 325.686
+/vis/scene/add/polylinePoint 388.267 476.076 352.542
+/vis/scene/add/polylinePoint 406.919 499.0 367.688
+/vis/scene/add/polylinePoint 481.781 591.128 428.492
+/vis/scene/add/polylinePoint 496.932 609.719 440.788
+/vis/scene/add/polylinePoint 503.794 618.146 446.371
+/vis/scene/add/polylinePoint 527.526 647.281 465.661
+/vis/scene/add/polylinePoint 547.75 672.049 482.097
+/vis/scene/add/polylinePoint 560.27 687.39 492.271
+/vis/scene/add/polylinePoint 568.46 697.441 498.933
+/vis/scene/add/polylinePoint 587.809 721.206 514.656
+/vis/scene/add/polylinePoint 631.032 774.361 549.736
+/vis/scene/add/polylinePoint 692.245 849.479 599.222
+/vis/scene/add/polylinePoint 694.317 852.017 600.893
+/vis/scene/add/polylinePoint 752.617 923.478 648.012
+/vis/scene/add/polylinePoint 756.232 927.929 650.933
+/vis/scene/add/polylinePoint 810.169 994.368 694.524
+/vis/scene/add/polylinePoint 814.397 999.555 697.936
+/vis/scene/add/polylinePoint 814.76 1000.0 698.228
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 16.9603 -2.39301 28.5033
+/vis/scene/add/polylinePoint 20.8495 -3.33522 33.5146
+/vis/scene/add/polylinePoint 25.0 -4.4348 39.0815
+/vis/scene/add/polylinePoint 42.0294 -9.37152 65.0
+/vis/scene/add/polylinePoint 48.6053 -11.2762 75.0
+/vis/scene/add/polylinePoint 142.484 -38.5273 217.742
+/vis/scene/add/polylinePoint 252.668 -70.6505 385.425
+/vis/scene/add/polylinePoint 252.932 -70.7276 385.827
+/vis/scene/add/polylinePoint 262.491 -73.5219 400.387
+/vis/scene/add/polylinePoint 281.96 -79.195 430.043
+/vis/scene/add/polylinePoint 287.269 -80.7433 438.13
+/vis/scene/add/polylinePoint 390.363 -110.791 595.136
+/vis/scene/add/polylinePoint 447.824 -127.523 682.377
+/vis/scene/add/polylinePoint 483.59 -137.931 736.593
+/vis/scene/add/polylinePoint 557.182 -159.367 848.306
+/vis/scene/add/polylinePoint 613.38 -175.803 933.667
+/vis/scene/add/polylinePoint 657.07 -188.542 1000.0
+/vis/scene/add/polylinePoint 0.995284 1.47339 39.1577
+/vis/scene/add/polylinePoint 2.99035 4.50935 48.7617
+/vis/scene/add/polylinePoint -3.0506e-05 -7.5779e-05 -48.9917
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -19.1474 -0.700849 7.01511
+/vis/scene/add/polylinePoint -21.2531 -0.693847 7.04798
+/vis/scene/add/polylinePoint -25.0 -0.576593 6.98124
+/vis/scene/add/polylinePoint -135.445 -4.89912 11.7004
+/vis/scene/add/polylinePoint -199.788 -7.36558 14.4761
+/vis/scene/add/polylinePoint -296.369 -11.0478 18.7183
+/vis/scene/add/polylinePoint -502.367 -18.9407 27.859
+/vis/scene/add/polylinePoint -705.775 -26.6805 37.0877
+/vis/scene/add/polylinePoint -712.034 -26.9181 37.37
+/vis/scene/add/polylinePoint -756.667 -28.6089 39.3903
+/vis/scene/add/polylinePoint -836.924 -31.6375 43.084
+/vis/scene/add/polylinePoint -924.603 -34.9448 47.1122
+/vis/scene/add/polylinePoint -1000.0 -37.7848 50.5694
+/vis/scene/add/polylinePoint 3.65533e-07 -2.8702e-06 -49.9987
+/vis/scene/add/polylinePoint 0.340356 1.96501 -27.7678
+/vis/scene/add/polylinePoint 0.0549001 -0.457207 30.7841
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -5.60481 -10.829 50.0
+/vis/scene/add/polylinePoint -11.2668 -20.9105 65.0
+/vis/scene/add/polylinePoint -15.0428 -27.6305 75.0
+/vis/scene/add/polylinePoint -19.6174 -35.7737 87.1144
+/vis/scene/add/polylinePoint -26.7485 -48.4652 105.997
+/vis/scene/add/polylinePoint -28.8414 -52.1881 111.536
+/vis/scene/add/polylinePoint -52.2857 -93.9161 173.616
+/vis/scene/add/polylinePoint -103.89 -185.786 310.219
+/vis/scene/add/polylinePoint -119.523 -213.617 351.615
+/vis/scene/add/polylinePoint -129.923 -232.153 379.17
+/vis/scene/add/polylinePoint -159.725 -285.274 458.145
+/vis/scene/add/polylinePoint -160.571 -286.779 460.384
+/vis/scene/add/polylinePoint -180.85 -322.883 514.099
+/vis/scene/add/polylinePoint -194.668 -347.506 550.73
+/vis/scene/add/polylinePoint -225.885 -403.119 633.46
+/vis/scene/add/polylinePoint -231.917 -413.862 649.444
+/vis/scene/add/polylinePoint -244.045 -435.458 681.573
+/vis/scene/add/polylinePoint -339.377 -605.271 934.152
+/vis/scene/add/polylinePoint -364.201 -649.438 1000.0
+/vis/scene/add/polylinePoint -2.18477 6.24488 32.0733
+/vis/scene/add/polylinePoint -3.69332 11.6974 28.2355
+/vis/scene/add/polylinePoint -4.65802 16.7475 25.9029
+/vis/scene/add/polylinePoint -5.46715 21.2032 24.6111
+/vis/scene/add/polylinePoint -5.70966 24.8836 23.6265
+/vis/scene/add/polylinePoint -5.73031 25.0 23.599
+/vis/scene/add/polylinePoint -8.85007 47.583 17.7794
+/vis/scene/add/polylinePoint -32.944 220.992 -26.8912
+/vis/scene/add/polylinePoint -36.8261 248.549 -33.8993
+/vis/scene/add/polylinePoint -39.3571 266.522 -38.4593
+/vis/scene/add/polylinePoint -41.6613 282.81 -42.5848
+/vis/scene/add/polylinePoint -46.5661 317.554 -51.3946
+/vis/scene/add/polylinePoint -48.701 332.595 -55.2153
+/vis/scene/add/polylinePoint -57.5529 394.844 -71.0431
+/vis/scene/add/polylinePoint -60.8984 418.398 -77.0592
+/vis/scene/add/polylinePoint -77.7692 537.221 -107.326
+/vis/scene/add/polylinePoint -86.26 597.462 -122.815
+/vis/scene/add/polylinePoint -113.615 791.569 -172.734
+/vis/scene/add/polylinePoint -125.934 877.616 -195.11
+/vis/scene/add/polylinePoint -140.822 983.302 -222.58
+/vis/scene/add/polylinePoint -143.173 1000.0 -226.974
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 3.59006e-05 -9.29371e-06 -49.9988
+/vis/scene/add/polylinePoint 0.0469756 -0.506783 -45.9586
+/vis/scene/add/polylinePoint 0.0781871 -0.907254 -45.7142
+/vis/scene/add/polylinePoint 0.117005 -1.2417 -45.5343
+/vis/scene/add/polylinePoint 0.198868 -1.48126 -45.3728
+/vis/scene/add/polylinePoint 0.245163 -1.66561 -45.2472
+/vis/scene/add/polylinePoint 0.248798 -1.7924 -45.1486
+/vis/scene/add/polylinePoint 0.237883 -1.81141 -45.1117
+/vis/scene/add/polylinePoint 0.238189 -1.81218 -45.1112
+/vis/scene/add/polylinePoint 0.238204 -1.81218 -45.1111
+/vis/scene/add/polylinePoint 0.238204 -1.81218 -45.1111
+/vis/scene/add/polylinePoint 0.843523 3.05609 -28.9673
+/vis/scene/add/polylinePoint 2.26349 4.62935 -20.2469
+/vis/scene/add/polylinePoint 1.75538 5.88501 -13.1423
+/vis/scene/add/polylinePoint 1.55411 6.23239 -11.1886
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.0210194 -0.0252851 -43.0097
+/vis/scene/add/polylinePoint 6.69247 0.154813 -15.2302
+/vis/scene/add/polylinePoint 12.6636 1.53688 0.818589
+/vis/scene/add/polylinePoint 15.6059 2.53748 7.56798
+/vis/scene/add/polylinePoint 19.0962 3.92597 15.8328
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.0337946 -0.043939 -4.88238
+/vis/scene/add/polylinePoint -0.201069 0.140597 -34.1478
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.102753 -0.956234 -34.777
+/vis/scene/add/polylinePoint -0.124481 -1.65594 -35.8643
+/vis/scene/add/polylinePoint -0.131892 -1.76796 -35.9898
+/vis/scene/add/polylinePoint -0.823956 -2.04374 -36.6847
+/vis/scene/add/polylinePoint -1.19932 -2.25638 -37.3771
+/vis/scene/add/polylinePoint -1.44244 -2.48983 -37.9325
+/vis/scene/add/polylinePoint -1.59392 -2.74543 -38.3505
+/vis/scene/add/polylinePoint -1.65304 -2.95941 -38.7063
+/vis/scene/add/polylinePoint -1.6456 -3.24189 -38.8893
+/vis/scene/add/polylinePoint -1.59381 -3.47747 -39.0042
+/vis/scene/add/polylinePoint -1.5451 -3.6624 -39.0564
+/vis/scene/add/polylinePoint -1.50469 -3.74442 -39.09
+/vis/scene/add/polylinePoint -1.50598 -3.74784 -39.0907
+/vis/scene/add/polylinePoint -1.50598 -3.74784 -39.0907
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.23866 -15.3882 34.9488
+/vis/scene/add/polylinePoint -0.372331 -16.0803 35.2623
+/vis/scene/add/polylinePoint -1.12252 -19.8164 37.0679
+/vis/scene/add/polylinePoint -2.40846 -25.0 39.7953
+/vis/scene/add/polylinePoint -6.48718 -59.1382 52.793
+/vis/scene/add/polylinePoint -8.08152 -72.4199 57.8423
+/vis/scene/add/polylinePoint -10.3356 -91.215 65.0
+/vis/scene/add/polylinePoint -11.0351 -97.0632 67.2286
+/vis/scene/add/polylinePoint -13.4685 -117.446 75.0
+/vis/scene/add/polylinePoint -20.0122 -171.551 95.6334
+/vis/scene/add/polylinePoint -22.4765 -192.001 103.438
+/vis/scene/add/polylinePoint -22.941 -195.868 104.914
+/vis/scene/add/polylinePoint -36.714 -309.75 148.375
+/vis/scene/add/polylinePoint -44.8337 -376.84 173.999
+/vis/scene/add/polylinePoint -45.0766 -378.847 174.767
+/vis/scene/add/polylinePoint -59.9895 -502.059 221.916
+/vis/scene/add/polylinePoint -65.8137 -550.085 240.34
+/vis/scene/add/polylinePoint -87.6044 -729.5 309.012
+/vis/scene/add/polylinePoint -101.492 -844.346 353.011
+/vis/scene/add/polylinePoint -103.583 -861.358 359.516
+/vis/scene/add/polylinePoint -104.81 -871.364 363.338
+/vis/scene/add/polylinePoint -108.215 -899.185 373.957
+/vis/scene/add/polylinePoint -117.905 -978.1 404.066
+/vis/scene/add/polylinePoint -120.592 -1000.0 412.428
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.24547 1.44346 -37.8146
+/vis/scene/add/polylinePoint -3.61767 2.62211 -35.0352
+/vis/scene/add/polylinePoint -5.18458 3.60326 -33.0448
+/vis/scene/add/polylinePoint -6.77107 4.40807 -31.7668
+/vis/scene/add/polylinePoint -7.99764 5.20181 -30.738
+/vis/scene/add/polylinePoint -8.9962 5.79357 -29.9102
+/vis/scene/add/polylinePoint -9.8253 6.13677 -29.1905
+/vis/scene/add/polylinePoint -10.4433 6.47431 -28.58
+/vis/scene/add/polylinePoint -11.0241 6.70954 -28.1897
+/vis/scene/add/polylinePoint -11.3613 6.85168 -27.9075
+/vis/scene/add/polylinePoint -11.6817 6.69716 -27.5598
+/vis/scene/add/polylinePoint -11.8988 6.57249 -27.2515
+/vis/scene/add/polylinePoint -12.1373 6.48228 -27.0806
+/vis/scene/add/polylinePoint -12.2885 6.37883 -26.9264
+/vis/scene/add/polylinePoint -12.4159 6.314 -26.8168
+/vis/scene/add/polylinePoint -12.4462 6.27332 -26.7701
+/vis/scene/add/polylinePoint -12.4454 6.27261 -26.7701
+/vis/scene/add/polylinePoint -12.4454 6.2726 -26.7701
+/vis/scene/add/polylinePoint -12.4454 6.2726 -26.7701
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 5.46213 19.4376 14.3023
+/vis/scene/add/polylinePoint 2.01944 25.0 15.3602
+/vis/scene/add/polylinePoint -8.83767 42.9944 17.8656
+/vis/scene/add/polylinePoint -88.1401 174.473 36.2951
+/vis/scene/add/polylinePoint -93.1973 182.923 37.4822
+/vis/scene/add/polylinePoint -113.132 216.259 42.1892
+/vis/scene/add/polylinePoint -178.663 325.542 57.5125
+/vis/scene/add/polylinePoint -301.933 530.019 86.0806
+/vis/scene/add/polylinePoint -490.517 844.472 129.606
+/vis/scene/add/polylinePoint -522.031 896.979 136.97
+/vis/scene/add/polylinePoint -571.196 978.955 148.36
+/vis/scene/add/polylinePoint -583.781 1000.0 151.3
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -8.90211 6.37197 2.64316
+/vis/scene/add/polylinePoint -11.371 7.15819 9.48643
+/vis/scene/add/polylinePoint -15.6412 9.93968 24.8552
+/vis/scene/add/polylinePoint -17.8187 10.9393 32.6334
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.254259 -0.615771 -20.0361
+/vis/scene/add/polylinePoint -1.74952 -3.97514 -9.38106
+/vis/scene/add/polylinePoint -3.34495 -7.4431 -0.57675
+/vis/scene/add/polylinePoint -5.18743 -12.5623 11.2089
+/vis/scene/add/polylinePoint -5.60662 -14.0643 14.5642
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.70213 -0.0743878 -19.5098
+/vis/scene/add/polylinePoint -9.47283 -0.365186 -13.7875
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.32848 0.692738 -21.4219
+/vis/scene/add/polylinePoint -4.29833 1.22761 -20.7144
+/vis/scene/add/polylinePoint -5.8699 1.84698 -20.2834
+/vis/scene/add/polylinePoint -7.08221 2.26906 -19.7297
+/vis/scene/add/polylinePoint -7.98719 2.61512 -19.1352
+/vis/scene/add/polylinePoint -8.68057 2.90203 -18.6154
+/vis/scene/add/polylinePoint -9.35578 2.95959 -18.3276
+/vis/scene/add/polylinePoint -9.83392 3.07414 -18.0169
+/vis/scene/add/polylinePoint -10.2488 3.13689 -17.7981
+/vis/scene/add/polylinePoint -10.5413 3.06945 -17.5738
+/vis/scene/add/polylinePoint -10.6727 3.00388 -17.3164
+/vis/scene/add/polylinePoint -10.8421 2.99096 -17.1663
+/vis/scene/add/polylinePoint -10.9398 2.95469 -17.0483
+/vis/scene/add/polylinePoint -10.9683 2.94793 -17.0182
+/vis/scene/add/polylinePoint -10.9686 2.94797 -17.0183
+/vis/scene/add/polylinePoint -10.9686 2.94796 -17.0183
+/vis/scene/add/polylinePoint -10.9686 2.94796 -17.0183
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -4.80942 0.357151 -18.5135
+/vis/scene/add/polylinePoint -13.5032 2.36427 -10.5789
+/vis/scene/add/polylinePoint -18.6857 3.71706 -5.56443
+/vis/scene/add/polylinePoint -24.2362 5.42489 -0.0375384
+/vis/scene/add/polylinePoint -25.0 5.86102 1.07275
+/vis/scene/add/polylinePoint -69.389 43.5451 65.0
+/vis/scene/add/polylinePoint -76.3621 49.4366 75.0
+/vis/scene/add/polylinePoint -121.449 87.5205 139.679
+/vis/scene/add/polylinePoint -142.089 104.942 169.294
+/vis/scene/add/polylinePoint -151.836 113.121 183.225
+/vis/scene/add/polylinePoint -168.902 127.418 207.611
+/vis/scene/add/polylinePoint -233.223 181.302 299.545
+/vis/scene/add/polylinePoint -372.593 297.94 498.167
+/vis/scene/add/polylinePoint -406.631 326.395 546.71
+/vis/scene/add/polylinePoint -475.837 384.34 645.476
+/vis/scene/add/polylinePoint -509.189 412.253 693.061
+/vis/scene/add/polylinePoint -512.889 415.345 698.327
+/vis/scene/add/polylinePoint -585.134 475.738 801.128
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -9.30847 6.96946 -45.2127
+/vis/scene/add/polylinePoint -9.30896 6.97144 -45.2251
+/vis/scene/add/polylinePoint -9.30891 6.97152 -45.2255
+/vis/scene/add/polylinePoint -9.30891 6.97152 -45.2255
+/vis/scene/add/polylinePoint -9.30891 6.97152 -45.2255
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -1.99036 -17.1881 -5.59921
+/vis/scene/add/polylinePoint -2.0066 -17.1842 -5.59584
+/vis/scene/add/polylinePoint -2.00684 -17.1837 -5.59602
+/vis/scene/add/polylinePoint -2.00684 -17.1837 -5.59602
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.98146 4.94474 50.0
+/vis/scene/add/polylinePoint 2.89719 9.60938 65.0
+/vis/scene/add/polylinePoint 2.84081 12.7192 75.0
+/vis/scene/add/polylinePoint 2.10831 54.1802 208.33
+/vis/scene/add/polylinePoint 2.06481 56.595 216.102
+/vis/scene/add/polylinePoint 1.84709 68.5868 254.7
+/vis/scene/add/polylinePoint 1.4197 92.6164 332.057
+/vis/scene/add/polylinePoint 1.3504 96.8062 345.538
+/vis/scene/add/polylinePoint 1.10657 111.407 392.495
+/vis/scene/add/polylinePoint -0.825146 224.919 757.753
+/vis/scene/add/polylinePoint -1.02694 239.021 803.141
+/vis/scene/add/polylinePoint -1.05259 240.915 809.242
+/vis/scene/add/polylinePoint -1.07952 242.89 815.603
+/vis/scene/add/polylinePoint -1.1943 251.538 843.447
+/vis/scene/add/polylinePoint -1.81444 300.162 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 6.70007 11.222 48.8619
+/vis/scene/add/polylinePoint 10.2975 16.0863 48.794
+/vis/scene/add/polylinePoint 12.8642 19.9028 49.5047
+/vis/scene/add/polylinePoint 13.7531 20.7972 49.0639
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 13.8713 12.5216 3.95845
+/vis/scene/add/polylinePoint 10.3937 16.9502 6.77422
+/vis/scene/add/polylinePoint 7.58491 21.0834 8.07128
+/vis/scene/add/polylinePoint 4.28105 23.455 8.9651
+/vis/scene/add/polylinePoint 2.94307 25.0 9.52536
+/vis/scene/add/polylinePoint -136.869 162.464 70.5371
+/vis/scene/add/polylinePoint -145.573 170.997 74.3252
+/vis/scene/add/polylinePoint -232.639 256.652 112.324
+/vis/scene/add/polylinePoint -234.686 258.666 113.217
+/vis/scene/add/polylinePoint -311.651 334.425 146.747
+/vis/scene/add/polylinePoint -328.281 350.829 153.976
+/vis/scene/add/polylinePoint -330.622 353.136 154.994
+/vis/scene/add/polylinePoint -341.05 363.405 159.528
+/vis/scene/add/polylinePoint -352.826 375.003 164.656
+/vis/scene/add/polylinePoint -481.049 501.213 220.534
+/vis/scene/add/polylinePoint -546.404 565.513 248.826
+/vis/scene/add/polylinePoint -565.224 584.101 256.951
+/vis/scene/add/polylinePoint -575.972 594.731 261.593
+/vis/scene/add/polylinePoint -611.985 630.423 277.226
+/vis/scene/add/polylinePoint -678.808 696.543 306.047
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -687.231 703.973 307.706
+/vis/scene/add/polylinePoint -729.974 741.634 316.124
+/vis/scene/add/polylinePoint -735.089 746.127 317.154
+/vis/scene/add/polylinePoint -737.418 748.176 317.626
+/vis/scene/add/polylinePoint -804.036 806.751 331.171
+/vis/scene/add/polylinePoint -842.48 840.214 338.806
+/vis/scene/add/polylinePoint -854.178 850.359 341.1
+/vis/scene/add/polylinePoint -857.522 853.265 341.759
+/vis/scene/add/polylinePoint -897.145 887.69 349.527
+/vis/scene/add/polylinePoint -910.688 899.479 352.26
+/vis/scene/add/polylinePoint -929.038 915.462 356.013
+/vis/scene/add/polylinePoint -936.327 921.801 357.509
+/vis/scene/add/polylinePoint -992.287 970.436 369.023
+/vis/scene/add/polylinePoint -1000.0 977.17 370.603
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -3.38822 4.97573 -15.1561
+/vis/scene/add/polylinePoint -6.60719 14.6071 -21.181
+/vis/scene/add/polylinePoint -9.87882 21.4253 -26.7369
+/vis/scene/add/polylinePoint -11.3998 25.0 -30.3391
+/vis/scene/add/polylinePoint -12.1061 27.0319 -32.3542
+/vis/scene/add/polylinePoint -21.8915 55.1821 -60.2697
+/vis/scene/add/polylinePoint -26.912 69.6106 -74.5863
+/vis/scene/add/polylinePoint -37.3711 99.6433 -104.346
+/vis/scene/add/polylinePoint -59.784 164.25 -168.32
+/vis/scene/add/polylinePoint -90.0118 251.448 -254.526
+/vis/scene/add/polylinePoint -90.5083 252.884 -255.947
+/vis/scene/add/polylinePoint -116.04 326.756 -329.089
+/vis/scene/add/polylinePoint -127.234 359.146 -361.164
+/vis/scene/add/polylinePoint -143.035 404.983 -406.593
+/vis/scene/add/polylinePoint -145.444 411.98 -413.511
+/vis/scene/add/polylinePoint -151.675 430.118 -431.436
+/vis/scene/add/polylinePoint -157.165 446.128 -447.223
+/vis/scene/add/polylinePoint -180.712 514.527 -514.602
+/vis/scene/add/polylinePoint -191.859 546.821 -546.394
+/vis/scene/add/polylinePoint -195.811 558.282 -557.683
+/vis/scene/add/polylinePoint -202.886 578.83 -577.929
+/vis/scene/add/polylinePoint -243.29 695.937 -693.425
+/vis/scene/add/polylinePoint -254.134 727.27 -724.405
+/vis/scene/add/polylinePoint -279.969 801.804 -798.046
+/vis/scene/add/polylinePoint -280.828 804.277 -800.495
+/vis/scene/add/polylinePoint -305.479 875.245 -870.799
+/vis/scene/add/polylinePoint -309.925 887.939 -883.348
+/vis/scene/add/polylinePoint -310.125 888.513 -883.915
+/vis/scene/add/polylinePoint -349.151 1000.0 -994.188
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 3.03916 -1.51461 6.60995
+/vis/scene/add/polylinePoint 4.50665 -3.19621 23.3675
+/vis/scene/add/polylinePoint 4.66358 -3.49052 25.0947
+/vis/scene/add/polylinePoint 8.61023 -7.87668 40.7105
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -7.30525 0.603686 38.6866
+/vis/scene/add/polylinePoint -7.74719 0.669867 38.6743
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.129416 0.833451 -17.6601
+/vis/scene/add/polylinePoint 7.41603 7.77793 -12.328
+/vis/scene/add/polylinePoint 11.5748 11.3254 -9.31172
+/vis/scene/add/polylinePoint 25.0 19.4072 -0.135747
+/vis/scene/add/polylinePoint 92.0788 63.7154 65.0
+/vis/scene/add/polylinePoint 102.387 70.5245 75.0
+/vis/scene/add/polylinePoint 177.628 120.208 147.992
+/vis/scene/add/polylinePoint 328.044 219.445 293.876
+/vis/scene/add/polylinePoint 348.537 232.973 313.762
+/vis/scene/add/polylinePoint 418.827 279.395 381.994
+/vis/scene/add/polylinePoint 421.277 281.015 384.371
+/vis/scene/add/polylinePoint 472.012 314.55 433.593
+/vis/scene/add/polylinePoint 478.126 318.588 439.524
+/vis/scene/add/polylinePoint 490.809 326.964 451.822
+/vis/scene/add/polylinePoint 511.282 340.488 471.677
+/vis/scene/add/polylinePoint 534.449 355.788 494.14
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -22.244 13.6635 12.6272
+/vis/scene/add/polylinePoint -22.0658 16.3184 11.1584
+/vis/scene/add/polylinePoint -22.6464 18.9873 10.0317
+/vis/scene/add/polylinePoint -23.0698 21.0504 9.00475
+/vis/scene/add/polylinePoint -23.5924 22.7295 8.26211
+/vis/scene/add/polylinePoint -24.0279 24.0961 7.6899
+/vis/scene/add/polylinePoint -24.2683 25.0 7.0859
+/vis/scene/add/polylinePoint -24.7746 26.3444 6.01684
+/vis/scene/add/polylinePoint -30.4199 41.3437 -5.92168
+/vis/scene/add/polylinePoint -32.8717 47.8835 -11.0992
+/vis/scene/add/polylinePoint -35.3393 54.461 -16.3029
+/vis/scene/add/polylinePoint -47.2817 86.2814 -41.387
+/vis/scene/add/polylinePoint -85.1524 186.636 -120.34
+/vis/scene/add/polylinePoint -93.4523 208.583 -137.559
+/vis/scene/add/polylinePoint -103.302 234.874 -158.192
+/vis/scene/add/polylinePoint -109.8 252.17 -171.765
+/vis/scene/add/polylinePoint -113.029 260.737 -178.511
+/vis/scene/add/polylinePoint -139.851 331.898 -234.679
+/vis/scene/add/polylinePoint -153.07 367.387 -262.688
+/vis/scene/add/polylinePoint -153.755 369.226 -264.14
+/vis/scene/add/polylinePoint -158.083 380.796 -273.278
+/vis/scene/add/polylinePoint -171.079 415.556 -300.684
+/vis/scene/add/polylinePoint -191.08 469.075 -342.793
+/vis/scene/add/polylinePoint -199.729 492.364 -360.858
+/vis/scene/add/polylinePoint -202.424 499.623 -366.485
+/vis/scene/add/polylinePoint -207.978 514.607 -378.11
+/vis/scene/add/polylinePoint -208.69 516.546 -379.612
+/vis/scene/add/polylinePoint -209.104 517.67 -380.483
+/vis/scene/add/polylinePoint -230.373 575.429 -425.25
+/vis/scene/add/polylinePoint -232.798 581.935 -430.281
+/vis/scene/add/polylinePoint -272.631 689.531 -513.312
+/vis/scene/add/polylinePoint -277.086 701.575 -522.55
+/vis/scene/add/polylinePoint -278.992 706.75 -526.516
+/vis/scene/add/polylinePoint -288.018 731.331 -545.214
+/vis/scene/add/polylinePoint -288.33 732.182 -545.858
+/vis/scene/add/polylinePoint -293.47 746.243 -556.502
+/vis/scene/add/polylinePoint -303.243 773.028 -576.799
+/vis/scene/add/polylinePoint -306.32 781.371 -583.155
+/vis/scene/add/polylinePoint -314.478 803.57 -600.029
+/vis/scene/add/polylinePoint -330.113 846.337 -632.691
+/vis/scene/add/polylinePoint -337.307 865.982 -647.735
+/vis/scene/add/polylinePoint -346.589 891.202 -667.052
+/vis/scene/add/polylinePoint -347.372 893.329 -668.681
+/vis/scene/add/polylinePoint -349.612 899.433 -673.36
+/vis/scene/add/polylinePoint -352.819 908.156 -680.053
+/vis/scene/add/polylinePoint -355.207 914.685 -685.078
+/vis/scene/add/polylinePoint -359.907 927.561 -694.983
+/vis/scene/add/polylinePoint -365.215 942.068 -706.171
+/vis/scene/add/polylinePoint -378.376 977.729 -733.644
+/vis/scene/add/polylinePoint -386.594 1000.0 -750.877
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -17.375 21.1242 8.83162
+/vis/scene/add/polylinePoint -20.8518 19.1344 8.53661
+/vis/scene/add/polylinePoint -23.7836 17.7025 8.19272
+/vis/scene/add/polylinePoint -25.0 17.0281 8.04634
+/vis/scene/add/polylinePoint -32.6989 12.8534 7.03838
+/vis/scene/add/polylinePoint -149.585 -50.5496 -8.27391
+/vis/scene/add/polylinePoint -173.347 -63.4345 -11.3937
+/vis/scene/add/polylinePoint -186.187 -70.3986 -13.0917
+/vis/scene/add/polylinePoint -219.876 -88.6456 -17.5824
+/vis/scene/add/polylinePoint -283.4 -123.099 -25.9732
+/vis/scene/add/polylinePoint -359.363 -164.307 -35.9685
+/vis/scene/add/polylinePoint -373.241 -171.792 -37.7516
+/vis/scene/add/polylinePoint -439.505 -207.579 -46.2471
+/vis/scene/add/polylinePoint -445.056 -210.574 -46.9497
+/vis/scene/add/polylinePoint -509.113 -245.138 -55.0344
+/vis/scene/add/polylinePoint -542.647 -263.283 -59.2505
+/vis/scene/add/polylinePoint -720.92 -359.871 -81.6345
+/vis/scene/add/polylinePoint -758.719 -380.64 -86.3733
+/vis/scene/add/polylinePoint -806.367 -406.899 -92.3008
+/vis/scene/add/polylinePoint -861.557 -437.312 -98.984
+/vis/scene/add/polylinePoint -865.468 -439.465 -99.4517
+/vis/scene/add/polylinePoint -1000.0 -513.443 -115.523
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -1.69347 1.07299 -20.7561
+/vis/scene/add/polylinePoint -7.05837 1.27329 0.25913
+/vis/scene/add/polylinePoint -14.2139 4.65592 15.5796
+/vis/scene/add/polylinePoint -15.0888 5.07211 17.3069
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -16.434 -11.7824 6.11577
+/vis/scene/add/polylinePoint -16.4282 -11.7697 6.10505
+/vis/scene/add/polylinePoint -16.428 -11.7694 6.10486
+/vis/scene/add/polylinePoint -16.428 -11.7694 6.10486
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.54248 2.99634 -33.7331
+/vis/scene/add/polylinePoint 4.63927 5.34938 -35.4893
+/vis/scene/add/polylinePoint 6.72768 7.04948 -36.5594
+/vis/scene/add/polylinePoint 8.50523 8.31615 -37.3651
+/vis/scene/add/polylinePoint 9.94825 9.12822 -38.2365
+/vis/scene/add/polylinePoint 11.065 9.70711 -39.0078
+/vis/scene/add/polylinePoint 11.9739 10.0195 -39.7341
+/vis/scene/add/polylinePoint 12.4945 10.3685 -40.4494
+/vis/scene/add/polylinePoint 12.9003 10.4923 -41.0802
+/vis/scene/add/polylinePoint 13.1754 10.6047 -41.5972
+/vis/scene/add/polylinePoint 13.3136 10.6907 -42.0453
+/vis/scene/add/polylinePoint 13.4569 10.7682 -42.3969
+/vis/scene/add/polylinePoint 13.5281 10.912 -42.657
+/vis/scene/add/polylinePoint 13.6102 11.0231 -42.8504
+/vis/scene/add/polylinePoint 13.6798 11.1382 -42.964
+/vis/scene/add/polylinePoint 13.6798 11.1566 -43.0184
+/vis/scene/add/polylinePoint 13.6803 11.1562 -43.0195
+/vis/scene/add/polylinePoint 13.6803 11.1562 -43.0195
+/vis/scene/add/polylinePoint 13.6803 11.1562 -43.0195
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.332851 1.64139 -31.6354
+/vis/scene/add/polylinePoint 0.449652 2.81027 -31.9441
+/vis/scene/add/polylinePoint 0.342005 3.64293 -32.3902
+/vis/scene/add/polylinePoint 0.136376 4.25904 -32.7618
+/vis/scene/add/polylinePoint 0.0770996 4.71722 -33.1515
+/vis/scene/add/polylinePoint -0.0258465 5.01509 -33.5179
+/vis/scene/add/polylinePoint -0.0752455 5.24508 -33.8206
+/vis/scene/add/polylinePoint -0.0660082 5.36842 -34.0919
+/vis/scene/add/polylinePoint -0.0313591 5.50227 -34.2759
+/vis/scene/add/polylinePoint 0.0369393 5.6061 -34.395
+/vis/scene/add/polylinePoint 0.056748 5.63853 -34.433
+/vis/scene/add/polylinePoint 0.0568724 5.63861 -34.4335
+/vis/scene/add/polylinePoint 0.0568724 5.63861 -34.4335
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu- green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 628.312 406.171 576.847
+/vis/scene/add/polylinePoint 641.229 413.13 588.207
+/vis/scene/add/polylinePoint 642.74 413.944 589.536
+/vis/scene/add/polylinePoint 651.808 418.83 597.512
+/vis/scene/add/polylinePoint 771.557 483.378 702.816
+/vis/scene/add/polylinePoint 873.05 538.106 791.996
+/vis/scene/add/polylinePoint 1000.0 606.532 903.413
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.1815 -1.8614 -45.2122
+/vis/scene/add/polylinePoint 0.167141 -1.86324 -45.2308
+/vis/scene/add/polylinePoint 0.166969 -1.86321 -45.231
+/vis/scene/add/polylinePoint 0.166969 -1.86321 -45.231
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -648.993 523.426 889.386
+/vis/scene/add/polylinePoint -701.292 562.446 961.593
+/vis/scene/add/polylinePoint -724.977 580.083 994.139
+/vis/scene/add/polylinePoint -729.251 583.262 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -5.75767 2.2091 -18.5035
+/vis/scene/add/polylinePoint -15.1952 3.76871 -6.04159
+/vis/scene/add/polylinePoint -25.0 4.2711 6.15137
+/vis/scene/add/polylinePoint -71.8086 2.90911 65.0
+/vis/scene/add/polylinePoint -75.1 2.81275 69.1371
+/vis/scene/add/polylinePoint -79.7638 2.67629 75.0
+/vis/scene/add/polylinePoint -118.022 1.55432 123.092
+/vis/scene/add/polylinePoint -258.698 -2.64404 299.891
+/vis/scene/add/polylinePoint -273.359 -3.0842 318.256
+/vis/scene/add/polylinePoint -334.627 -4.90894 394.996
+/vis/scene/add/polylinePoint -341.634 -5.11266 403.773
+/vis/scene/add/polylinePoint -367.608 -5.8703 436.316
+/vis/scene/add/polylinePoint -431.66 -7.72172 516.579
+/vis/scene/add/polylinePoint -488.027 -9.38131 587.224
+/vis/scene/add/polylinePoint -492.512 -9.51252 592.847
+/vis/scene/add/polylinePoint -517.685 -10.2531 624.401
+/vis/scene/add/polylinePoint -604.13 -12.805 732.771
+/vis/scene/add/polylinePoint -616.851 -13.1842 748.72
+/vis/scene/add/polylinePoint -633.703 -13.6905 769.849
+/vis/scene/add/polylinePoint -662.449 -14.5548 805.876
+/vis/scene/add/polylinePoint -768.261 -17.6758 938.568
+/vis/scene/add/polylinePoint -802.223 -18.6674 981.134
+/vis/scene/add/polylinePoint -817.276 -19.1227 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 3.55518 -12.8816 1.38029
+/vis/scene/add/polylinePoint 3.8156 -13.2505 2.23009
+/vis/scene/add/polylinePoint 4.05809 -13.6173 2.86249
+/vis/scene/add/polylinePoint 4.27703 -13.9987 3.28466
+/vis/scene/add/polylinePoint 4.40158 -14.2949 3.65497
+/vis/scene/add/polylinePoint 4.46536 -14.5219 3.96924
+/vis/scene/add/polylinePoint 4.41166 -14.7966 4.08024
+/vis/scene/add/polylinePoint 4.33605 -15.0027 4.1747
+/vis/scene/add/polylinePoint 4.25554 -15.1185 4.27167
+/vis/scene/add/polylinePoint 4.23518 -15.1636 4.26878
+/vis/scene/add/polylinePoint 4.23424 -15.1637 4.26828
+/vis/scene/add/polylinePoint 4.23424 -15.1637 4.26828
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.386306 -4.32247 32.3245
+/vis/scene/add/polylinePoint 0.613409 -7.63608 32.1685
+/vis/scene/add/polylinePoint 1.14499 -10.2087 31.9107
+/vis/scene/add/polylinePoint 1.18922 -12.3279 31.5004
+/vis/scene/add/polylinePoint 1.0296 -13.9615 31.1869
+/vis/scene/add/polylinePoint 0.975097 -15.1115 30.5553
+/vis/scene/add/polylinePoint 1.01264 -16.1506 30.2361
+/vis/scene/add/polylinePoint 1.27016 -16.9913 30.0745
+/vis/scene/add/polylinePoint 1.42234 -17.6659 29.8614
+/vis/scene/add/polylinePoint 1.58683 -18.1994 29.8934
+/vis/scene/add/polylinePoint 1.71334 -18.6313 29.9017
+/vis/scene/add/polylinePoint 1.90565 -18.9398 29.8854
+/vis/scene/add/polylinePoint 2.04368 -19.1909 29.8117
+/vis/scene/add/polylinePoint 2.11078 -19.387 29.7246
+/vis/scene/add/polylinePoint 2.12414 -19.5372 29.6802
+/vis/scene/add/polylinePoint 2.15104 -19.5622 29.6641
+/vis/scene/add/polylinePoint 2.15179 -19.563 29.6631
+/vis/scene/add/polylinePoint 2.1518 -19.563 29.663
+/vis/scene/add/polylinePoint 2.1518 -19.563 29.663
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.621058 0.394805 -23.6869
+/vis/scene/add/polylinePoint -2.44778 1.14455 -24.3468
+/vis/scene/add/polylinePoint -3.92944 1.62036 -24.9253
+/vis/scene/add/polylinePoint -4.9702 2.05475 -25.6072
+/vis/scene/add/polylinePoint -5.84338 2.29869 -26.1709
+/vis/scene/add/polylinePoint -6.49385 2.57445 -26.6072
+/vis/scene/add/polylinePoint -7.08804 2.63631 -26.832
+/vis/scene/add/polylinePoint -7.54385 2.60055 -27.0552
+/vis/scene/add/polylinePoint -7.85168 2.62818 -27.314
+/vis/scene/add/polylinePoint -8.0469 2.55457 -27.567
+/vis/scene/add/polylinePoint -8.1801 2.52113 -27.779
+/vis/scene/add/polylinePoint -8.25704 2.49709 -27.9504
+/vis/scene/add/polylinePoint -8.2957 2.48662 -28.0194
+/vis/scene/add/polylinePoint -8.29508 2.4861 -28.0198
+/vis/scene/add/polylinePoint -8.29508 2.4861 -28.0198
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 4.28739 -5.31976 -5.00897
+/vis/scene/add/polylinePoint 7.44963 -9.92278 8.86328
+/vis/scene/add/polylinePoint 8.83738 -12.2359 13.4835
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 1.2813 0.53149 -18.3624
+/vis/scene/add/polylinePoint 1.30576 1.49635 -15.0018
+/vis/scene/add/polylinePoint 1.38364 2.12678 -12.2337
+/vis/scene/add/polylinePoint 1.43126 2.83037 -10.062
+/vis/scene/add/polylinePoint 2.02019 3.28399 -8.37954
+/vis/scene/add/polylinePoint 2.27408 3.70256 -6.97473
+/vis/scene/add/polylinePoint 2.23041 3.95365 -5.79973
+/vis/scene/add/polylinePoint 2.29868 4.13145 -4.84348
+/vis/scene/add/polylinePoint 2.21942 4.23239 -4.10352
+/vis/scene/add/polylinePoint 2.06837 4.24959 -3.52189
+/vis/scene/add/polylinePoint 1.89695 4.31768 -3.08224
+/vis/scene/add/polylinePoint 1.82625 4.32239 -2.87827
+/vis/scene/add/polylinePoint 1.60006 4.55443 -2.84719
+/vis/scene/add/polylinePoint 1.44639 4.73937 -2.78283
+/vis/scene/add/polylinePoint 1.31459 4.84788 -2.83479
+/vis/scene/add/polylinePoint 1.27182 4.88456 -2.84355
+/vis/scene/add/polylinePoint 1.27134 4.88532 -2.84245
+/vis/scene/add/polylinePoint 1.27134 4.88532 -2.84245
+/vis/scene/add/polylinePoint 1.27134 4.88532 -2.84245
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -3.41978 -2.0422 -23.5727
+/vis/scene/add/polylinePoint -7.36028 -2.88919 -24.4812
+/vis/scene/add/polylinePoint -10.4137 -3.98659 -24.7829
+/vis/scene/add/polylinePoint -12.9167 -4.70736 -25.1992
+/vis/scene/add/polylinePoint -14.762 -5.26319 -25.9
+/vis/scene/add/polylinePoint -16.1111 -5.65077 -26.7811
+/vis/scene/add/polylinePoint -17.0634 -6.18439 -27.5967
+/vis/scene/add/polylinePoint -17.8707 -6.74264 -28.1223
+/vis/scene/add/polylinePoint -18.455 -7.22876 -28.5589
+/vis/scene/add/polylinePoint -18.9376 -7.65539 -28.848
+/vis/scene/add/polylinePoint -19.3932 -7.94363 -29.0295
+/vis/scene/add/polylinePoint -19.74 -8.24716 -29.1088
+/vis/scene/add/polylinePoint -20.0607 -8.43638 -29.163
+/vis/scene/add/polylinePoint -20.329 -8.56393 -29.1847
+/vis/scene/add/polylinePoint -20.552 -8.6126 -29.196
+/vis/scene/add/polylinePoint -20.7143 -8.661 -29.176
+/vis/scene/add/polylinePoint -20.7596 -8.63621 -29.1857
+/vis/scene/add/polylinePoint -20.7597 -8.63609 -29.187
+/vis/scene/add/polylinePoint -20.7597 -8.63609 -29.187
+/vis/scene/add/polylinePoint -20.7597 -8.63609 -29.187
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.41651 -2.31613 50.0
+/vis/scene/add/polylinePoint 15.0868 -32.0913 65.0
+/vis/scene/add/polylinePoint 19.4404 -42.3223 70.1526
+/vis/scene/add/polylinePoint 20.9058 -45.7664 71.8896
+/vis/scene/add/polylinePoint 22.8998 -50.4521 74.2519
+/vis/scene/add/polylinePoint 23.5319 -51.9369 75.0
+/vis/scene/add/polylinePoint 72.2344 -166.226 132.611
+/vis/scene/add/polylinePoint 116.15 -268.968 184.433
+/vis/scene/add/polylinePoint 131.097 -303.933 202.03
+/vis/scene/add/polylinePoint 137.352 -318.556 209.382
+/vis/scene/add/polylinePoint 145.592 -337.83 219.059
+/vis/scene/add/polylinePoint 165.814 -385.136 242.823
+/vis/scene/add/polylinePoint 174.572 -405.614 253.125
+/vis/scene/add/polylinePoint 212.447 -494.182 297.677
+/vis/scene/add/polylinePoint 227.526 -529.301 315.36
+/vis/scene/add/polylinePoint 232.595 -541.11 321.299
+/vis/scene/add/polylinePoint 266.777 -620.729 361.329
+/vis/scene/add/polylinePoint 284.032 -660.907 381.554
+/vis/scene/add/polylinePoint 416.487 -969.162 536.35
+/vis/scene/add/polylinePoint 425.449 -990.018 546.824
+/vis/scene/add/polylinePoint 426.994 -993.618 548.633
+/vis/scene/add/polylinePoint 429.734 -1000.0 551.839
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 1.80578 1.33391 50.0
+/vis/scene/add/polylinePoint 6.14668 -0.621729 65.0
+/vis/scene/add/polylinePoint 9.04052 -1.9249 75.0
+/vis/scene/add/polylinePoint 33.9436 -13.1399 160.994
+/vis/scene/add/polylinePoint 73.918 -31.1312 298.957
+/vis/scene/add/polylinePoint 122.68 -53.1127 467.16
+/vis/scene/add/polylinePoint 204.228 -89.9887 748.703
+/vis/scene/add/polylinePoint 233.442 -103.186 849.512
+/vis/scene/add/polylinePoint 234.186 -103.522 852.076
+/vis/scene/add/polylinePoint 255.687 -113.247 926.24
+/vis/scene/add/polylinePoint 277.068 -122.926 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 1.58503 -2.80533 50.0
+/vis/scene/add/polylinePoint 3.77883 -19.979 60.9365
+/vis/scene/add/polylinePoint 4.5899 -26.3597 65.0
+/vis/scene/add/polylinePoint 6.59526 -42.0748 75.0
+/vis/scene/add/polylinePoint 13.4909 -96.54 109.545
+/vis/scene/add/polylinePoint 14.4338 -104.011 114.282
+/vis/scene/add/polylinePoint 24.2546 -181.813 163.602
+/vis/scene/add/polylinePoint 31.0019 -235.771 197.816
+/vis/scene/add/polylinePoint 34.2689 -261.958 214.398
+/vis/scene/add/polylinePoint 36.3704 -278.849 225.096
+/vis/scene/add/polylinePoint 63.6649 -499.977 363.984
+/vis/scene/add/polylinePoint 67.4459 -530.588 383.091
+/vis/scene/add/polylinePoint 67.4906 -530.95 383.317
+/vis/scene/add/polylinePoint 68.8422 -541.911 390.163
+/vis/scene/add/polylinePoint 79.0155 -624.68 441.866
+/vis/scene/add/polylinePoint 100.216 -797.192 549.724
+/vis/scene/add/polylinePoint 114.053 -910.994 621.127
+/vis/scene/add/polylinePoint 123.269 -987.69 669.247
+/vis/scene/add/polylinePoint 124.763 -1000.0 676.975
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 4.30037 -15.1826 4.16291
+/vis/scene/add/polylinePoint 4.29768 -15.1769 4.14672
+/vis/scene/add/polylinePoint 4.29788 -15.1761 4.14656
+/vis/scene/add/polylinePoint 4.29788 -15.1761 4.14656
+/vis/scene/add/polylinePoint 4.29788 -15.1761 4.14656
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.98663 -13.8536 33.7105
+/vis/scene/add/polylinePoint -12.0922 -20.3526 29.5851
+/vis/scene/add/polylinePoint -14.3586 -21.7349 29.0142
+/vis/scene/add/polylinePoint -16.0935 -22.6577 28.6929
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 11.6363 -11.472 12.9661
+/vis/scene/add/polylinePoint 11.6163 -11.0661 12.4302
+/vis/scene/add/polylinePoint 11.6989 -10.8279 11.9617
+/vis/scene/add/polylinePoint 11.7098 -10.5918 11.6197
+/vis/scene/add/polylinePoint 11.6876 -10.449 11.3267
+/vis/scene/add/polylinePoint 11.6949 -10.3961 11.0817
+/vis/scene/add/polylinePoint 11.6706 -10.3433 10.9105
+/vis/scene/add/polylinePoint 11.6534 -10.3295 10.8443
+/vis/scene/add/polylinePoint 11.6534 -10.3302 10.8437
+/vis/scene/add/polylinePoint 11.6534 -10.3302 10.8437
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -22.6719 -7.26878 0.506046
+/vis/scene/add/polylinePoint -25.0 -8.15467 3.00014
+/vis/scene/add/polylinePoint -50.3746 -17.1049 32.2893
+/vis/scene/add/polylinePoint -78.6847 -27.0898 65.0
+/vis/scene/add/polylinePoint -87.3391 -30.1436 75.0
+/vis/scene/add/polylinePoint -143.755 -50.0985 140.244
+/vis/scene/add/polylinePoint -161.085 -56.2327 160.285
+/vis/scene/add/polylinePoint -182.732 -63.8995 185.323
+/vis/scene/add/polylinePoint -299.372 -105.235 320.16
+/vis/scene/add/polylinePoint -364.565 -128.321 395.494
+/vis/scene/add/polylinePoint -499.134 -175.964 551.025
+/vis/scene/add/polylinePoint -679.843 -239.901 759.998
+/vis/scene/add/polylinePoint -690.742 -243.71 772.598
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -16.2337 -22.3481 28.4412
+/vis/scene/add/polylinePoint -16.2968 -22.0741 28.2535
+/vis/scene/add/polylinePoint -16.3557 -21.8485 28.1381
+/vis/scene/add/polylinePoint -16.4077 -21.6677 28.0892
+/vis/scene/add/polylinePoint -16.3941 -21.5902 28.0405
+/vis/scene/add/polylinePoint -16.3937 -21.589 28.0406
+/vis/scene/add/polylinePoint -16.3937 -21.589 28.0406
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -3.36279 -6.13309 2.49749
+/vis/scene/add/polylinePoint -3.69498 -7.02406 2.75106
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -704.28 -249.079 785.852
+/vis/scene/add/polylinePoint -708.596 -250.792 790.074
+/vis/scene/add/polylinePoint -816.056 -293.447 895.205
+/vis/scene/add/polylinePoint -873.348 -316.095 950.915
+/vis/scene/add/polylinePoint -881.131 -319.177 958.487
+/vis/scene/add/polylinePoint -923.797 -336.043 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.578897 1.60938 41.5819
+/vis/scene/add/polylinePoint -0.531208 1.41668 40.8094
+/vis/scene/add/polylinePoint -3.11274 1.05006 39.0973
+/vis/scene/add/polylinePoint -10.393 2.39709 35.3076
+/vis/scene/add/polylinePoint -15.3995 5.29439 32.1856
+/vis/scene/add/polylinePoint -15.8291 5.69738 31.9739
+/vis/scene/add/polylinePoint -19.9974 8.86159 31.1845
+/vis/scene/add/polylinePoint -23.5379 11.1733 30.3958
+/vis/scene/add/polylinePoint -25.0 12.488 30.194
+/vis/scene/add/polylinePoint -32.5108 17.8892 29.143
+/vis/scene/add/polylinePoint -49.513 30.1118 26.775
+/vis/scene/add/polylinePoint -138.592 94.1488 14.3313
+/vis/scene/add/polylinePoint -191.329 132.077 6.92082
+/vis/scene/add/polylinePoint -192.703 133.067 6.72726
+/vis/scene/add/polylinePoint -248.024 172.871 -1.05267
+/vis/scene/add/polylinePoint -305.034 213.934 -9.11419
+/vis/scene/add/polylinePoint -337.808 237.532 -13.6549
+/vis/scene/add/polylinePoint -365.908 257.854 -17.5471
+/vis/scene/add/polylinePoint -528.26 375.291 -40.0885
+/vis/scene/add/polylinePoint -549.209 390.38 -42.9983
+/vis/scene/add/polylinePoint -568.255 404.09 -45.6429
+/vis/scene/add/polylinePoint -576.659 410.13 -46.8015
+/vis/scene/add/polylinePoint -583.385 414.971 -47.7321
+/vis/scene/add/polylinePoint -587.582 417.998 -48.3144
+/vis/scene/add/polylinePoint -626.524 446.086 -53.7194
+/vis/scene/add/polylinePoint -681.769 485.792 -61.3563
+/vis/scene/add/polylinePoint -691.048 492.464 -62.6576
+/vis/scene/add/polylinePoint -762.225 543.693 -72.5936
+/vis/scene/add/polylinePoint -779.459 556.122 -74.9753
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 11.669 -10.2555 10.7441
+/vis/scene/add/polylinePoint 11.656 -10.249 10.7321
+/vis/scene/add/polylinePoint 11.6555 -10.249 10.7323
+/vis/scene/add/polylinePoint 11.6555 -10.249 10.7323
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.209298 -0.0328529 -5.95616
+/vis/scene/add/polylinePoint -842.279 582.901 -88.9744
+/vis/scene/add/polylinePoint -863.267 591.826 -93.6334
+/vis/scene/add/polylinePoint -926.822 618.948 -107.75
+/vis/scene/add/polylinePoint -1000.0 650.296 -124.01
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -7.62309 3.06308 44.2254
+/vis/scene/add/polylinePoint -12.7075 5.5808 50.0
+/vis/scene/add/polylinePoint -25.1059 12.3674 64.754
+/vis/scene/add/polylinePoint -25.3127 12.4806 65.0
+/vis/scene/add/polylinePoint -33.7172 17.0794 75.0
+/vis/scene/add/polylinePoint -61.2997 32.2326 107.725
+/vis/scene/add/polylinePoint -108.985 58.4328 164.336
+/vis/scene/add/polylinePoint -135.568 73.0212 195.909
+/vis/scene/add/polylinePoint -158.364 85.5358 222.973
+/vis/scene/add/polylinePoint -162.336 87.7161 227.689
+/vis/scene/add/polylinePoint -173.06 93.604 240.424
+/vis/scene/add/polylinePoint -314.687 171.305 408.643
+/vis/scene/add/polylinePoint -329.735 179.567 426.49
+/vis/scene/add/polylinePoint -370.427 201.925 474.757
+/vis/scene/add/polylinePoint -396.361 216.187 505.5
+/vis/scene/add/polylinePoint -450.289 245.847 569.431
+/vis/scene/add/polylinePoint -546.336 298.64 683.38
+/vis/scene/add/polylinePoint -550.761 301.077 688.632
+/vis/scene/add/polylinePoint -696.388 381.257 861.451
+/vis/scene/add/polylinePoint -715.463 391.809 884.121
+/vis/scene/add/polylinePoint -752.128 412.139 927.727
+/vis/scene/add/polylinePoint -812.87 445.816 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 20.6368 13.1476 21.31
+/vis/scene/add/polylinePoint 25.0 16.6073 20.3662
+/vis/scene/add/polylinePoint 56.5698 44.3944 9.91601
+/vis/scene/add/polylinePoint 62.2193 49.3677 8.04602
+/vis/scene/add/polylinePoint 257.853 221.588 -56.7037
+/vis/scene/add/polylinePoint 289.5 249.293 -67.1899
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -20.8278 -8.57961 -29.1032
+/vis/scene/add/polylinePoint -20.8334 -8.58371 -29.0869
+/vis/scene/add/polylinePoint -20.8335 -8.5842 -29.0861
+/vis/scene/add/polylinePoint -20.8335 -8.5842 -29.0861
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -0.943927 -6.5538 -32.9049
+/vis/scene/add/polylinePoint -0.978431 -8.25282 -33.5465
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu- green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 299.158 256.337 -71.0906
+/vis/scene/add/polylinePoint 351.149 294.268 -92.0857
+/vis/scene/add/polylinePoint 428.232 350.548 -123.176
+/vis/scene/add/polylinePoint 511.264 410.899 -156.454
+/vis/scene/add/polylinePoint 547.936 437.577 -171.241
+/vis/scene/add/polylinePoint 786.935 611.494 -267.348
+/vis/scene/add/polylinePoint 792.27 615.379 -269.502
+/vis/scene/add/polylinePoint 826.967 640.684 -283.517
+/vis/scene/add/polylinePoint 932.004 717.221 -326.027
+/vis/scene/add/polylinePoint 989.11 758.586 -349.266
+/vis/scene/add/polylinePoint 1000.0 766.461 -353.704
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 2.40805 -4.70761 25.0169
+/vis/scene/add/polylinePoint 8.19458 2.05545 38.6747
+/vis/scene/add/polylinePoint 13.0787 7.28476 50.0
+/vis/scene/add/polylinePoint 20.7501 14.3241 65.0
+/vis/scene/add/polylinePoint 21.5976 15.1014 66.6571
+/vis/scene/add/polylinePoint 25.865 19.0144 75.0
+/vis/scene/add/polylinePoint 31.2479 23.9484 85.5206
+/vis/scene/add/polylinePoint 49.8428 40.9673 121.823
+/vis/scene/add/polylinePoint 119.697 104.877 258.151
+/vis/scene/add/polylinePoint 147.689 130.467 312.762
+/vis/scene/add/polylinePoint 156.736 138.732 330.418
+/vis/scene/add/polylinePoint 217.076 193.796 448.119
+/vis/scene/add/polylinePoint 221.544 197.871 456.833
+/vis/scene/add/polylinePoint 278.938 250.23 568.797
+/vis/scene/add/polylinePoint 286.702 257.3 583.924
+/vis/scene/add/polylinePoint 344.191 309.678 695.986
+/vis/scene/add/polylinePoint 352.906 317.614 712.945
+/vis/scene/add/polylinePoint 456.773 412.249 915.19
+/vis/scene/add/polylinePoint 500.22 451.969 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 24.762 6.34448 18.2336
+/vis/scene/add/polylinePoint 25.0 6.45501 18.5405
+/vis/scene/add/polylinePoint 28.0445 8.01006 22.4592
+/vis/scene/add/polylinePoint 37.7159 12.9479 34.9571
+/vis/scene/add/polylinePoint 60.9776 24.8219 65.0
+/vis/scene/add/polylinePoint 68.7271 28.7778 75.0
+/vis/scene/add/polylinePoint 72.1414 30.5195 79.3975
+/vis/scene/add/polylinePoint 137.471 63.8426 163.517
+/vis/scene/add/polylinePoint 198.097 94.7475 241.661
+/vis/scene/add/polylinePoint 201.127 96.2922 245.57
+/vis/scene/add/polylinePoint 203.626 97.564 248.793
+/vis/scene/add/polylinePoint 275.561 134.158 341.568
+/vis/scene/add/polylinePoint 446.864 221.03 562.714
+/vis/scene/add/polylinePoint 478.887 237.411 604.17
+/vis/scene/add/polylinePoint 495.461 245.896 625.636
+/vis/scene/add/polylinePoint 598.521 298.753 759.227
+/vis/scene/add/polylinePoint 737.879 370.443 940.299
+/vis/scene/add/polylinePoint 757.338 380.504 965.623
+/vis/scene/add/polylinePoint 783.754 394.153 1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 7.67094 -4.88982 14.7882
+/vis/scene/add/polylinePoint 7.677 -4.88026 14.7928
+/vis/scene/add/polylinePoint 7.67733 -4.8804 14.7928
+/vis/scene/add/polylinePoint 7.67733 -4.8804 14.7928
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.0224 -0.84983 -23.5616
+/vis/scene/add/polylinePoint -2.01239 -0.867103 -23.5533
+/vis/scene/add/polylinePoint -2.01238 -0.867428 -23.5529
+/vis/scene/add/polylinePoint -2.01238 -0.867428 -23.5529
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 7.91149 2.15067 -29.3016
+/vis/scene/add/polylinePoint 10.6071 3.95381 -29.6344
+/vis/scene/add/polylinePoint 12.7408 5.41209 -30.0368
+/vis/scene/add/polylinePoint 14.2541 6.79183 -30.4355
+/vis/scene/add/polylinePoint 15.5061 7.91953 -30.6152
+/vis/scene/add/polylinePoint 16.7186 8.54046 -30.7251
+/vis/scene/add/polylinePoint 17.6866 9.06232 -30.9567
+/vis/scene/add/polylinePoint 18.4137 9.5001 -31.2832
+/vis/scene/add/polylinePoint 18.891 9.97734 -31.5179
+/vis/scene/add/polylinePoint 19.2948 10.3443 -31.7093
+/vis/scene/add/polylinePoint 19.6325 10.5567 -31.9129
+/vis/scene/add/polylinePoint 19.8405 10.7911 -32.0726
+/vis/scene/add/polylinePoint 19.9726 10.9583 -32.2448
+/vis/scene/add/polylinePoint 20.0891 11.1006 -32.3334
+/vis/scene/add/polylinePoint 20.113 11.139 -32.3647
+/vis/scene/add/polylinePoint 20.1604 11.0983 -32.396
+/vis/scene/add/polylinePoint 20.1609 11.0971 -32.3963
+/vis/scene/add/polylinePoint 20.1609 11.0971 -32.3963
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 5.79462 -0.56268 -26.5677
+/vis/scene/add/polylinePoint 6.59161 -1.19759 -24.4832
+/vis/scene/add/polylinePoint 7.69149 -1.55199 -23.0096
+/vis/scene/add/polylinePoint 8.37376 -1.9778 -21.7936
+/vis/scene/add/polylinePoint 9.08102 -2.35985 -20.9224
+/vis/scene/add/polylinePoint 9.58457 -2.81671 -20.2521
+/vis/scene/add/polylinePoint 9.97019 -3.17826 -19.7108
+/vis/scene/add/polylinePoint 10.1526 -3.54427 -19.2811
+/vis/scene/add/polylinePoint 10.3305 -3.84885 -18.9742
+/vis/scene/add/polylinePoint 10.5243 -4.02088 -18.7202
+/vis/scene/add/polylinePoint 10.6588 -4.17742 -18.5322
+/vis/scene/add/polylinePoint 10.7767 -4.26007 -18.3772
+/vis/scene/add/polylinePoint 10.8821 -4.28055 -18.2742
+/vis/scene/add/polylinePoint 10.9049 -4.28263 -18.2581
+/vis/scene/add/polylinePoint 10.9056 -4.28257 -18.2582
+/vis/scene/add/polylinePoint 10.9056 -4.28257 -18.2582
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 10.8863 -4.20448 -18.3577
+/vis/scene/add/polylinePoint 10.8845 -4.20028 -18.3738
+/vis/scene/add/polylinePoint 10.8846 -4.20037 -18.3739
+/vis/scene/add/polylinePoint 10.8846 -4.20037 -18.3739
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 16.8754 -2.83395 -4.71298
+/vis/scene/add/polylinePoint 16.8674 -2.82777 -4.69887
+/vis/scene/add/polylinePoint 16.8676 -2.82807 -4.69868
+/vis/scene/add/polylinePoint 16.8676 -2.82807 -4.69868
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -1.43461 -4.2505 -43.624
+/vis/scene/add/polylinePoint -3.66514 -14.5945 -27.2743
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 1.75694 1.21814 -39.5167
+/vis/scene/add/polylinePoint 2.23904 1.23158 -36.286
+/vis/scene/add/polylinePoint 3.9639 0.747682 -28.2434
+/vis/scene/add/polylinePoint 5.3315 0.666755 -21.8158
+/vis/scene/add/polylinePoint 6.69344 -0.0813076 -16.5468
+/vis/scene/add/polylinePoint 8.45624 -1.05315 -12.7235
+/vis/scene/add/polylinePoint 9.82288 -1.84437 -9.55691
+/vis/scene/add/polylinePoint 10.3897 -1.8622 -6.74403
+/vis/scene/add/polylinePoint 10.7722 -1.6822 -4.45861
+/vis/scene/add/polylinePoint 10.8119 -1.36672 -2.65229
+/vis/scene/add/polylinePoint 10.8596 -1.14278 -1.16086
+/vis/scene/add/polylinePoint 10.8263 -1.06234 -0.663602
+/vis/scene/add/polylinePoint 10.4246 -1.68949 0.0073524
+/vis/scene/add/polylinePoint 10.0818 -2.50367 0.00177506
+/vis/scene/add/polylinePoint 9.78653 -3.13151 0.058047
+/vis/scene/add/polylinePoint 9.59466 -3.654 0.000335726
+/vis/scene/add/polylinePoint 9.48989 -4.07072 -0.091385
+/vis/scene/add/polylinePoint 9.38104 -4.39854 -0.187003
+/vis/scene/add/polylinePoint 9.22359 -4.61382 -0.266529
+/vis/scene/add/polylinePoint 9.1156 -4.78372 -0.341877
+/vis/scene/add/polylinePoint 9.05684 -4.90798 -0.39678
+/vis/scene/add/polylinePoint 9.05721 -4.92892 -0.412944
+/vis/scene/add/polylinePoint 9.05722 -4.92896 -0.413055
+/vis/scene/add/polylinePoint 9.05722 -4.92896 -0.413055
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 0.714952 0.31117 -47.4692
+/vis/scene/add/polylinePoint -0.0780502 -0.382617 -48.9992
+/vis/scene/add/polylinePoint -0.471154 -0.880021 -50.0
+/vis/scene/add/polylinePoint -3.21078 -7.29461 -59.9455
+/vis/scene/add/polylinePoint -8.78346 -20.3642 -80.2168
+/vis/scene/add/polylinePoint -26.9978 -62.9522 -146.138
+/vis/scene/add/polylinePoint -29.0015 -67.6476 -153.437
+/vis/scene/add/polylinePoint -29.3327 -68.4225 -154.644
+/vis/scene/add/polylinePoint -43.8929 -102.388 -207.573
+/vis/scene/add/polylinePoint -45.0393 -105.124 -211.783
+/vis/scene/add/polylinePoint -58.6289 -137.6 -261.775
+/vis/scene/add/polylinePoint -65.2911 -153.596 -286.276
+/vis/scene/add/polylinePoint -65.3534 -153.744 -286.503
+/vis/scene/add/polylinePoint -67.4406 -158.716 -294.101
+/vis/scene/add/polylinePoint -77.5328 -182.786 -330.863
+/vis/scene/add/polylinePoint -79.228 -186.814 -336.997
+/vis/scene/add/polylinePoint -90.2648 -213.078 -377.073
+/vis/scene/add/polylinePoint -91.7615 -216.603 -382.447
+/vis/scene/add/polylinePoint -92.8715 -219.229 -386.454
+/vis/scene/add/polylinePoint -93.4967 -220.71 -388.72
+/vis/scene/add/polylinePoint -98.3839 -232.252 -406.401
+/vis/scene/add/polylinePoint -98.8346 -233.315 -408.031
+/vis/scene/add/polylinePoint -99.1948 -234.165 -409.336
+/vis/scene/add/polylinePoint -110.977 -261.956 -452.03
+/vis/scene/add/polylinePoint -126.049 -297.48 -506.744
+/vis/scene/add/polylinePoint -126.525 -298.617 -508.49
+/vis/scene/add/polylinePoint -134.798 -318.382 -538.835
+/vis/scene/add/polylinePoint -137.271 -324.288 -547.925
+/vis/scene/add/polylinePoint -144.531 -341.518 -574.518
+/vis/scene/add/polylinePoint -146.211 -345.486 -580.674
+/vis/scene/add/polylinePoint -151.759 -358.619 -601.04
+/vis/scene/add/polylinePoint -180.822 -426.589 -706.421
+/vis/scene/add/polylinePoint -186.151 -438.939 -725.665
+/vis/scene/add/polylinePoint -193.475 -455.904 -752.024
+/vis/scene/add/polylinePoint -210.168 -494.687 -812.343
+/vis/scene/add/polylinePoint -212.214 -499.496 -819.834
+/vis/scene/add/polylinePoint -215.501 -507.242 -831.896
+/vis/scene/add/polylinePoint -215.884 -508.146 -833.306
+/vis/scene/add/polylinePoint -217.949 -513.017 -840.899
+/vis/scene/add/polylinePoint -220.848 -519.899 -851.631
+/vis/scene/add/polylinePoint -222.63 -524.142 -858.258
+/vis/scene/add/polylinePoint -227.135 -534.898 -875.058
+/vis/scene/add/polylinePoint -231.237 -544.765 -890.545
+/vis/scene/add/polylinePoint -244.967 -577.92 -942.477
+/vis/scene/add/polylinePoint -252.428 -596.259 -970.999
+/vis/scene/add/polylinePoint -259.991 -614.942 -1000.0
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 4.0215 -8.90058 -31.5835
+/vis/scene/add/polylinePoint 7.35825 -11.0816 -30.2273
+/vis/scene/add/polylinePoint 9.37014 -13.2476 -28.7116
+/vis/scene/add/polylinePoint 10.8706 -14.6739 -27.7225
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 5.08024 -0.624183 -47.5973
+/vis/scene/add/polylinePoint 9.93208 -1.46967 -48.6154
+/vis/scene/add/polylinePoint 13.8336 -1.1972 -49.6656
+/vis/scene/add/polylinePoint 14.4881 -1.14421 -50.0
+/vis/scene/add/polylinePoint 37.9029 0.386443 -62.513
+/vis/scene/add/polylinePoint 56.6505 1.60318 -72.5295
+/vis/scene/add/polylinePoint 92.1881 3.89862 -91.5105
+/vis/scene/add/polylinePoint 206.432 11.2897 -152.321
+/vis/scene/add/polylinePoint 268.761 15.2733 -185.668
+/vis/scene/add/polylinePoint 293.718 16.8458 -199.037
+/vis/scene/add/polylinePoint 366.522 21.401 -238.08
+/vis/scene/add/polylinePoint 385.468 22.5746 -248.273
+/vis/scene/add/polylinePoint 440.545 26.0122 -277.965
+/vis/scene/add/polylinePoint 445.47 26.3249 -280.626
+/vis/scene/add/polylinePoint 448.761 26.5329 -282.404
+/vis/scene/add/polylinePoint 448.85 26.5385 -282.452
+/vis/scene/add/polylinePoint 456.7 27.0423 -286.69
+/vis/scene/add/polylinePoint 466.425 27.6646 -291.936
+/vis/scene/add/polylinePoint 495.872 29.5529 -307.815
+/vis/scene/add/polylinePoint 559.497 33.5873 -342.198
+/vis/scene/add/polylinePoint 590.857 35.5852 -359.211
+/vis/scene/add/polylinePoint 910.242 55.9027 -532.35
+/vis/scene/add/polylinePoint 915.062 56.2269 -534.988
+/vis/scene/add/polylinePoint 948.724 58.4956 -553.59
+/vis/scene/add/polylinePoint 956.996 59.0463 -558.174
+/vis/scene/add/polylinePoint 973.449 60.1577 -567.302
+/vis/scene/add/polylinePoint 986.596 61.0619 -574.625
+/vis/scene/add/polylinePoint 1000.0 61.9883 -582.099
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -12.3617 6.21506 -26.6945
+/vis/scene/add/polylinePoint -12.346 6.21105 -26.6855
+/vis/scene/add/polylinePoint -12.345 6.21087 -26.6852
+/vis/scene/add/polylinePoint -12.345 6.21086 -26.6852
+/vis/scene/add/polylinePoint -12.345 6.21086 -26.6852
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -14.9036 9.73192 31.1559
+/vis/scene/add/polylinePoint -12.5034 8.88647 30.1205
+/vis/scene/add/polylinePoint -10.5418 8.39837 29.3637
+/vis/scene/add/polylinePoint -8.94932 7.90209 28.9573
+/vis/scene/add/polylinePoint -7.61541 7.53556 28.9588
+/vis/scene/add/polylinePoint -6.55921 7.23954 28.8846
+/vis/scene/add/polylinePoint -5.82066 6.84417 28.5956
+/vis/scene/add/polylinePoint -5.26072 6.46393 28.3376
+/vis/scene/add/polylinePoint -4.78 6.18209 28.2632
+/vis/scene/add/polylinePoint -4.42168 5.93045 28.1314
+/vis/scene/add/polylinePoint -4.10087 5.77681 28.0811
+/vis/scene/add/polylinePoint -3.84798 5.67343 28.0311
+/vis/scene/add/polylinePoint -3.65757 5.59239 28.0015
+/vis/scene/add/polylinePoint -3.53089 5.52871 27.9804
+/vis/scene/add/polylinePoint -3.50931 5.52377 27.9755
+/vis/scene/add/polylinePoint -3.50907 5.52375 27.9755
+/vis/scene/add/polylinePoint -3.50907 5.52375 27.9755
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint -2.26667 5.93789 -14.4201
+/vis/scene/add/polylinePoint -5.04261 10.1658 -8.45252
+/vis/scene/add/polylinePoint -5.16419 15.2665 -5.20516
+/vis/scene/add/polylinePoint -5.37654 17.2409 -4.24523
+/vis/scene/add/polylinePoint -5.08705 19.901 -3.41155
+/vis/scene/add/polylinePoint -4.6161 23.8131 -2.99456
+/vis/scene/add/polylinePoint -4.34135 25.0 -2.84499
+/vis/scene/add/polylinePoint -3.41571 34.6732 -1.06913
+/vis/scene/add/polylinePoint -1.2684 57.094 3.03865
+/vis/scene/add/polylinePoint 1.98097 91.169 9.26879
+/vis/scene/add/polylinePoint 3.61841 108.607 12.4388
+/vis/scene/add/polylinePoint 9.08858 166.749 23.0718
+/vis/scene/add/polylinePoint 12.9558 207.536 30.4678
+/vis/scene/add/polylinePoint 20.6233 288.588 44.8169
+/vis/scene/add/polylinePoint 37.3558 463.585 75.2548
+/vis/scene/add/polylinePoint 48.2406 576.386 94.3546
+/vis/scene/add/polylinePoint 48.8152 582.19 95.3478
+/vis/scene/add/polylinePoint 49.0001 584.057 95.6669
+/vis/scene/add/polylinePoint 50.0586 594.748 97.4935
+/vis/scene/add/polylinePoint 51.5299 609.536 100.021
+/vis/scene/add/polylinePoint 53.1535 625.908 102.81
+/vis/scene/add/polylinePoint 54.7617 642.204 105.59
+/vis/scene/add/polylinePoint 63.8622 734.944 121.447
+/vis/scene/add/polylinePoint 67.5727 772.626 127.9
+/vis/scene/add/polylinePoint 69.7274 794.783 131.709
+/vis/scene/add/polylinePoint 71.6489 814.966 135.21
+/vis/scene/add/polylinePoint 77.2734 874.436 145.515
+/vis/scene/add/polylinePoint 78.4385 886.495 147.626
+/vis/scene/add/polylinePoint 89.3743 1000.0 167.394
+
+/vis/scene/add/userAction
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/add/polyline
+/vis/scene/add/polylinePoint 6.75976 -16.9757 21.9589
+/vis/scene/add/polylinePoint 6.64406 -16.9085 21.7777
+/vis/scene/add/polylinePoint 6.57976 -16.8178 21.6635
+/vis/scene/add/polylinePoint 6.56331 -16.8046 21.6342
+/vis/scene/add/polylinePoint 6.56278 -16.8047 21.6337
+/vis/scene/add/polylinePoint 6.56278 -16.8047 21.6337
+
+# Update viewer
+/vis/viewer/set/autoRefresh true
+/vis/viewer/refresh
