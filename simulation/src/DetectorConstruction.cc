@@ -42,7 +42,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   // Tungsten block parameters - 10×10×30 cm
   G4double tungsten_x = 5*cm;
   G4double tungsten_y = 5*cm; 
-  G4double tungsten_z = 100*cm;
+  G4double tungsten_z = 75*cm;
   
   // Detector parameters - circular discs with 30 cm diameter and 1 cm thickness
   G4double detector_radius = 75*cm;  // 30 cm diameter
@@ -50,6 +50,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   // Detector positions (distance from the end of the tungsten block)
   G4double detector1_position = tungsten_z/2 + 60*cm;  // 10 cm from tungsten
+  G4double detector2_position = tungsten_z/2 + 550*cm; // m from the block
 
   // World volume - cylindrical
 G4double world_radius = 0.5*world_size;  // Radius matching the box half-width
@@ -114,21 +115,26 @@ G4VPhysicalVolume* physWorld =
                     0,                      // copy number
                     true);                  // checking overlaps
   
-    G4Tubs* solidDetector2 = 
+  G4Tubs* solidDetector2 = 
     new G4Tubs("Detector1", 
               0*cm,                   // inner radius
               detector_radius,        // outer radius
               0.5*detector_thickness, // half-length in z
               0*deg,                  // start angle
               360*deg);              // spanning angle             // spanning angle
-  
-  // Detector 1 (2 cm from tungsten)
+  G4ThreeVector detector1Pos = G4ThreeVector(0, 0, detector1_position);
+  new G4PVPlacement(nullptr, detector1Pos, logicDetector1, "Detector1", logicWorld, false, 0, true);
+  fDetector1Position = detector1Pos;
+
+
+
+  // Detector 2 (10 m from tungsten)
   G4LogicalVolume* logicDetector2 = 
-    new G4LogicalVolume(solidDetector1, scintillator_mat, "Detector2");
+    new G4LogicalVolume(solidDetector2, scintillator_mat, "Detector2");
   
   new G4PVPlacement(nullptr,                // no rotation
-                    G4ThreeVector(0, 0, detector1_position+900*cm), // position
-                    logicDetector1,         // its logical volume
+                    G4ThreeVector(0, 0, detector2_position), // position
+                    logicDetector2,         // its logical volume
                     "Detector2",            // its name
                     logicWorld,             // its mother volume
                     false,                  // no boolean operation
@@ -136,6 +142,12 @@ G4VPhysicalVolume* physWorld =
                     true);                  // checking overlaps
   
   
+
+  G4ThreeVector detector2Pos = G4ThreeVector(0, 0, detector2_position);
+  new G4PVPlacement(nullptr, detector2Pos, logicDetector2, "Detector2", logicWorld, false, 0, true);
+  fDetector2Position = detector2Pos;
+
+
   // Visual attributes
   G4VisAttributes* tungsten_vis_att = new G4VisAttributes(G4Colour(0.5, 0.5, 0.5)); // Grey
   logicTungsten->SetVisAttributes(tungsten_vis_att);
@@ -170,11 +182,11 @@ void DetectorConstruction::ConstructSDandField()
   // Create global magnetic field
   if (!fElectricFieldSetup) {
     fElectricFieldSetup = new ElectricFieldSetup();
-    G4ThreeVector fieldValue = G4ThreeVector(0.0, 0.0, 1.0*tesla);
+    G4ThreeVector fieldValue = G4ThreeVector(0.0, 0.0, 7.0*tesla);
     fElectricFieldSetup->SetMagneticField(fieldValue);
     
     G4cout << "\n-----------------------------------------------------------" << G4endl;
-    G4cout << " Global Magnetic Field Set to: 0, 0, 1 Tesla" << G4endl;
+    G4cout << " Global Magnetic Field Set to: 0, 0, 7 Tesla" << G4endl;
     G4cout << "-----------------------------------------------------------\n" << G4endl;
   }
 }

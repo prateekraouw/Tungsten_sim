@@ -12,10 +12,9 @@
 #include "G4SystemOfUnits.hh"  // This will include the units
 
 // Define a custom limited-region magnetic field class
-class LimitedRegionField : public G4MagneticField
-{
+class LimitedRegionField : public G4MagneticField {
 public:
-    LimitedRegionField(G4double zLimit) : fZLimit(zLimit) {}
+    LimitedRegionField(G4double zMax, G4double zMin) : fZMax(zMax), fZMin(zMin) {}
     
     virtual void GetFieldValue(const G4double point[4], G4double* field) const override
     {
@@ -27,23 +26,23 @@ public:
         field[4] = 0.0;
         field[5] = 0.0;
         
-        // Check if the point is within our defined region (0 to zLimit)
-        if (point[2] >= 0.0 && point[2] <= fZLimit) {
+        // Check if the point is within our defined region (zMin to zMax)
+        if (point[2] <= fZMax && point[2] >= fZMin) {
             field[2] = 7.0 * CLHEP::tesla; // 7 Tesla in +z direction
         }
     }
     
 private:
-    G4double fZLimit; // Z limit of the field
+    G4double fZMax; // Upper Z limit of the field
+    G4double fZMin; // Lower Z limit of the field
 };
 
 // Constructor for ElectricFieldSetup
-// In ElectricFieldSetup constructor
-ElectricFieldSetup::ElectricFieldSetup()
-{
-    // Create a limited region field that extends from z=0 to z=2m
-    G4double fieldLimit = 10.0 * CLHEP::m;  // 2 meters
-    fMagneticField = new LimitedRegionField(fieldLimit);
+ElectricFieldSetup::ElectricFieldSetup() {
+    // Create a limited region field that extends from z=-5 to z=5
+    G4double zMax = 10.0 * CLHEP::m;  // Upper limit (5 meters)
+    G4double zMin = -5.0 * CLHEP::m; // Lower limit (-5 meters)
+    fMagneticField = new LimitedRegionField(zMax, zMin);
     
     // Get the global field manager
     fFieldManager = G4TransportationManager::GetTransportationManager()->GetFieldManager();
@@ -56,8 +55,8 @@ ElectricFieldSetup::ElectricFieldSetup()
     
     // Create the chord finder with a smaller min step for better precision at boundary
     G4double minStep = 0.005 * CLHEP::mm; // Smaller minimum step for better precision
-    G4MagInt_Driver* driver = new G4MagInt_Driver(minStep, 
-                                                 fStepper, 
+    G4MagInt_Driver* driver = new G4MagInt_Driver(minStep,
+                                                 fStepper,
                                                  fStepper->GetNumberOfVariables());
     fChordFinder = new G4ChordFinder(driver);
     
@@ -69,26 +68,25 @@ ElectricFieldSetup::ElectricFieldSetup()
     fFieldManager->SetChordFinder(fChordFinder);
     fFieldManager->SetDetectorField(fMagneticField);
     
-    G4cout << "Magnetic field of 7 Tesla in +z direction created, limited to " 
-           << fieldLimit/CLHEP::m << " meters from origin" << G4endl;
+    G4cout << "Magnetic field of 7 Tesla in +z direction created, limited to region from "
+           << zMin/CLHEP::m << " to " << zMax/CLHEP::m << " meters along z-axis" << G4endl;
     G4cout << "Particles will maintain their direction after leaving the field region" << G4endl;
 }
+
 // Destructor for ElectricFieldSetup
-ElectricFieldSetup::~ElectricFieldSetup()
-{
+ElectricFieldSetup::~ElectricFieldSetup() {
     delete fChordFinder;
     delete fStepper;
     delete fMagneticField;
 }
 
 // Method to update the magnetic field
-void ElectricFieldSetup::SetMagneticField(G4ThreeVector fieldVector)
-{
+void ElectricFieldSetup::SetMagneticField(G4ThreeVector fieldVector) {
     // This method is kept for potential future field value changes
     // It's not needed for the current implementation
     
     G4cout << "Magnetic field set to ("
-           << fieldVector.x()/CLHEP::tesla << " "
-           << fieldVector.y()/CLHEP::tesla << " "
-           << fieldVector.z()/CLHEP::tesla << ") Tesla" << G4endl;
+          << fieldVector.x()/CLHEP::tesla << " "
+          << fieldVector.y()/CLHEP::tesla << " "
+          << fieldVector.z()/CLHEP::tesla << ") Tesla" << G4endl;
 }

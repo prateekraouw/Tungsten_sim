@@ -33,7 +33,7 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0., 0., 1.));
   
   // Position the beam 1 cm before the tungsten block
-  fParticleGun->SetParticlePosition(G4ThreeVector(0., 0., -1.*cm));
+  fParticleGun->SetParticlePosition(G4ThreeVector(0., 0., -10.*cm));
 
   // Generate the primary vertex
   fParticleGun->GeneratePrimaryVertex(anEvent);

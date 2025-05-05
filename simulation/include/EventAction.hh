@@ -30,6 +30,7 @@ public:
   G4int GetMuonsAtDetector2() const { return fMuonsAtDetector2; }
   G4int GetPionsAtDetector2() const { return fPionsAtDetector2; }
 
+
 private:
   G4double fEdep;  // Energy deposit
   
@@ -40,6 +41,8 @@ private:
   // Counters for detector 2 (10m counter)
   G4int fMuonsAtDetector2;
   G4int fPionsAtDetector2;
+
+
 };
 
 #endif

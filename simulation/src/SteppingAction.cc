@@ -48,6 +48,8 @@ SteppingAction::~SteppingAction()
 
 void SteppingAction::UserSteppingAction(const G4Step* step)
 {
+  
+
   if (!fScoringVolume || !fDetector1Volume || !fDetector2Volume) { 
     const DetectorConstruction* detectorConstruction
       = static_cast<const DetectorConstruction*>
@@ -55,8 +57,15 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     fScoringVolume = detectorConstruction->GetScoringVolume();
     fDetector1Volume = detectorConstruction->GetDetector1Volume();
     fDetector2Volume = detectorConstruction->GetDetector2Volume();
+    
+    G4cout << "Detector 1 position: " << detectorConstruction->GetDetector1Position()/cm << " cm" << G4endl;
+    G4cout << "Detector 2 position: " << detectorConstruction->GetDetector2Position()/cm << " cm" << G4endl;
+
   }
 
+
+    // Now that we have detectorConstruction, print the positions
+    
   // Get the RunAction - using const_cast to handle the constness issue
   const G4UserRunAction* constRunAction = G4RunManager::GetRunManager()->GetUserRunAction();
   RunAction* runAction = const_cast<RunAction*>(dynamic_cast<const RunAction*>(constRunAction));
@@ -65,6 +74,40 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   G4Track* track = step->GetTrack();
   G4ParticleDefinition* particle = track->GetDefinition();
   G4String particleName = particle->GetParticleName();
+  G4double energy = track->GetKineticEnergy();
+  
+  // Check for pion decay specifically
+  G4String processName = "Unknown";
+  const G4VProcess* process = step->GetPostStepPoint()->GetProcessDefinedStep();
+  if (process) processName = process->GetProcessName();
+  
+  // If this is a decay process
+  if (processName == "Decay") {
+    // If the current particle is a pion
+    if (particleName == "pi+" || particleName == "pi-") {
+      // Get secondaries created in this step
+      const std::vector<const G4Track*>* secondaries = step->GetSecondaryInCurrentStep();
+      
+      if (secondaries && secondaries->size() > 0) {
+        for (const G4Track* secTrack : *secondaries) {
+          G4String secName = secTrack->GetDefinition()->GetParticleName();
+          
+          // If a muon is created from pion decay
+          if (secName == "mu+" || secName == "mu-") {
+            G4ThreeVector position = step->GetPostStepPoint()->GetPosition();
+            G4double secEnergy = secTrack->GetKineticEnergy();
+            
+            G4cout << "\n!!! PION DECAY DETECTED !!!" << G4endl;
+            G4cout << particleName << " → " << secName << G4endl;
+            G4cout << "Position: " << position/mm << " mm" << G4endl;
+            G4cout << "Parent Energy: " << energy/MeV << " MeV" << G4endl;
+            G4cout << "Muon Energy: " << secEnergy/MeV << " MeV" << G4endl;
+          }
+        }
+      }
+    }
+  }
+  
   
   // Get current volume
   G4LogicalVolume* volume 
@@ -76,7 +119,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     if (particleName == "mu+" || particleName == "mu-") {
       // Count muons
       fDetector1Particles[particleName]++;
-      
+      runAction->RecordParticleToExcel(particleName, energy);
       // Add to event counts
       if (fEventAction) {
         fEventAction->AddMuonAtDetector1();
@@ -90,7 +133,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     else if (particleName == "pi+" || particleName == "pi-") {
       // Count charged pions
       fDetector1Particles[particleName]++;
-      
+      runAction->RecordParticleToExcel(particleName, energy);
       // Add to event counts
       if (fEventAction) {
         fEventAction->AddPionAtDetector1();
@@ -101,13 +144,14 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       G4cout << "Energy: " << track->GetKineticEnergy()/MeV << " MeV" << G4endl;
     }
   }
-  
+
   // Check for muons and charged pions in detector 2 (10m counter)
   if (step->IsFirstStepInVolume() && volume == fDetector2Volume) {
     if (particleName == "mu+" || particleName == "mu-") {
       // Count muons at Detector 2
       fDetector2Particles[particleName]++;
-      
+      particleName="2"+particleName;
+      runAction->RecordParticleToExcel(particleName, energy);
       // Add to event counts
       if (fEventAction) {
         fEventAction->AddMuonAtDetector2();
@@ -121,7 +165,8 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     else if (particleName == "pi+" || particleName == "pi-") {
       // Count charged pions at Detector 2
       fDetector2Particles[particleName]++;
-      
+      particleName="2"+particleName;
+      runAction->RecordParticleToExcel(particleName, energy);
       // Add to event counts
       if (fEventAction) {
         fEventAction->AddPionAtDetector2();
@@ -135,6 +180,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
        << " m, Particle: " << particleName << G4endl;
     }
   }
+
 
   // Check if we are in scoring volume for energy deposition
   if (volume == fScoringVolume) {

@@ -25,12 +25,12 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   fParticleCounts.clear();
   
   // Open Excel file for particle data
-  G4String fileName = "particle_data_run" + std::to_string(run->GetRunID()) + ".csv";
+  G4String fileName = "particle_data" + std::to_string(run->GetRunID()) + ".csv";
   fOutputFile.open(fileName);
   
   // Write CSV header with more information
   if (fOutputFile.is_open()) {
-    fOutputFile << "ParticleType\tPosX_mm\tPosY_mm\tPosZ_mm" << std::endl;
+    fOutputFile << "ParticleType,Energy" << std::endl;
     G4cout << "Recording particle data to file: " << fileName << G4endl;
   } else {
     G4cerr << "ERROR: Could not open output file " << fileName << G4endl;
@@ -57,17 +57,15 @@ void RunAction::EndOfRunAction(const G4Run* run)
 }
 
 void RunAction::RecordParticleToExcel(const G4String& name, 
-                                     const G4ThreeVector& position)
+                                     const G4double& kineticEnergy)
 {
   if (fOutputFile.is_open()) {
     G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
     
     // Write to Excel with enhanced information
     fOutputFile
-                << name << "\t"
-                << position.x()/mm << "\t"
-                << position.y()/mm << "\t"
-                << position.z()/mm << "\t"<<std::endl;
+                << name << ","
+                << kineticEnergy/MeV<<std::endl;
   }
   
   // Count this particle type for the summary

@@ -23,15 +23,20 @@ class RunAction : public G4UserRunAction
     
     // Record particle data to Excel
     void RecordParticleToExcel(const G4String& name, 
-                              const G4ThreeVector& position);
+                              const G4double& position);
                               
     // Count particle for summary
     void CountParticle(const G4String& name) { fParticleCounts[name]++; }
+    void RecordPionDecay(const G4String& pionType, const G4String& muonType, 
+                    G4double pionEnergy, G4double muonEnergy,
+                    const G4ThreeVector& position);
+
+
 
   private:
     std::map<G4String, int> fSecondaryParticles;
     std::map<G4String, int> fParticleCounts;  // For tracking all particles
     std::ofstream fOutputFile;
-};
+    };
 
 #endif

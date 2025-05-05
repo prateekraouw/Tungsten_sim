@@ -34,12 +34,14 @@ private:
   G4LogicalVolume* fScoringVolume;
   G4LogicalVolume* fDetector1Volume;
   G4LogicalVolume* fDetector2Volume;
+  
   G4LogicalVolume* fCounterVolume;  // Add this for the 10m detector
   
   // Maps to count particles at each detector
   std::map<G4String, G4int> fParticleCounter;
   std::map<G4String, G4int> fDetector1Particles;
   std::map<G4String, G4int> fDetector2Particles;
+
   std::map<G4String, G4int> fCounter10mParticles;
   
   // Store detected particle information
